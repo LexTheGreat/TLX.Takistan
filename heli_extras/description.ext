@@ -1,0 +1,11 @@
+//Dialog Includes
+#include "heli_extras_dialog\heli_extras_dialog.hpp"
+#include "heli_extras_dialog\airplane_extras_dialog.hpp"
+
+class Extended_PostInit_EventHandlers   
+{
+	class heli_extras
+	{
+		clientInit = "execVM 'heli_extras_init.sqf'";
+	};
+};

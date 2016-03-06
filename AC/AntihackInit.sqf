@@ -1,0 +1,7 @@
+execVM "AC\antiteleport.sqf";
+
+
+
+
+
+

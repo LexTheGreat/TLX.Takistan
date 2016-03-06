@@ -1,0 +1,8 @@
+if (isNil "markPos") then {markPos = true;} else {markPos = !markPos};
+if(markPos) then {titleText ["Markers added to map","PLAIN DOWN"]; titleFadeOut 4;};
+if(isNil "markers") then { markers = []};
+while {markPos} do
+{ 	unitList = allUnits;	j = count unitList;	i = 0;	for "i" from 0 to j do	{		unit = unitList select i;		pos = position unit;		deleteMarkerLocal ("playerMarker"+ (str i));		marker = "playerMarker" + (str i);		marker = createMarkerLocal [marker,pos];		marker setMarkerTypeLocal "waypoint";		marker setMarkerPosLocal (pos);		marker setMarkerColorLocal("ColorBlue");		marker setMarkerTextLocal format ["%1",name unit];	};			_pos = getPos player;	_zombies = _pos nearEntities ["zZombie_Base", 1000];	_count = count _zombies;	_markcount = count markers;	for "_i" from 0 to (_markcount -1) do	{			deleteMarkerLocal ("zombieMarker"+ (str _i));	};	for "_i" from 0 to (_count -1) do	{			_zombie = _zombies select _i;						pos = position _zombie;			_text = format ["zombieMarker%1", _i];		markers set [_i, _text];			if(alive _zombie) then		{						marker = "zombieMarker" + (str _i);			marker = createMarkerLocal [marker,pos];			marker setMarkerTypeLocal "waypoint";			marker setMarkerPosLocal (pos);			marker setMarkerColorLocal("ColorRed");			marker setMarkerTextLocal "Zombie";				};					};	sleep 0.5};
+if(!markPos) then{ 	unitList = allUnits;	j = count unitList;	i = 0;	for "i" from 0 to j do	{						deleteMarkerLocal ("playerMarker"+ (str i));			};			_count = count markers;	for "_i" from 0 to (_count -1) do	{			deleteMarkerLocal ("zombieMarker"+ (str _i));	};	sleep 0.5};
+
+titleText ["Markers removed","PLAIN DOWN"]; titleFadeOut 4
