@@ -139,7 +139,7 @@ _role RemoveAction action122;
 _role RemoveAction action123;
 _role RemoveAction action124;
 _role RemoveAction action125;
-_role RemoveAction actionTerror;
+//_role RemoveAction actionTerror;
 
 
 fuelshop1 RemoveAction gsshop1;

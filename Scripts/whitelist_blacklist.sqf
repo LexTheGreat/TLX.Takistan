@@ -136,33 +136,22 @@ if((_uid in insblacklist) && (_side == resistance)) then {
 	sleep 7;
 	failMission "END1";};
 	
-if((!ispmc) && (isciv) && rolenumber >= 60) then {
-	player groupChat "You cannot join a PMC slot without supporter privileges!";
+if(isSupSlot !issup) then {
+	player groupChat "You cannot join a Supporter slot without Supporter privileges!";
 	sleep 7;
-	failMission "END1";};
-if((!isAdmins) && rolenumber == 72) then {
+	failMission "END1";
+};
+if(isAdminSlot && !isAdmins) then {
 	player groupChat "You cannot join a Admin slot without being an admin!";
 	sleep 7;
-	failMission "END1";};
-if((!isvip) && rolenumber == 71) then {
+	failMission "END1";
+};
+if(isVipSlot && !isvip) then {
 	player groupChat "You cannot join a VIP slot without VIP privileges!";
 	sleep 7;
-	failMission "END1";};
-_notAllowed = false;
-if(!issup) then {
-	if((rolenumber == 70) ||(rolenumber >= 73 && rolenumber <= 82)||(rolenumber >= 92 && rolenumber <= 95)) then {
-		player groupChat "You cannot join a supporter slot without supporter privileges!";
-		sleep 7;
-		failMission "END1";
-	};
+	failMission "END1";
 };
-if(!isStaff) then {
-	/*if(rolenumber == 96) then {
-		player groupChat "You cannot join a Developer slot without Developer privileges!";
-		sleep 7;
-		failMission "END1";
-	}; Dog Slot */
-};
+
 if(_uid in opfcmdblacklist) then {
 	if (rolenumber >= 73 && rolenumber <= 74) then {
 		player groupChat "You are Blacklisted from Opfor Command Slots!";
