@@ -8,7 +8,7 @@
 	1.itemname
 3.
 	0.buy cost
-	1.build time (was sell cost)
+	1.(sell cost)
 4.
 	0.ItemTypeKg
 	1.License
