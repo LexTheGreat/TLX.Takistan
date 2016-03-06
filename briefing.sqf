@@ -21,7 +21,7 @@ player createDiaryRecord ["specialitems",
 "Expensive Diamond Ring",
 "
 Needs:<br/>
-Diamond:15<br/>
+Diamond: 15<br/>
 Gold: 10<br/>
 "
 ]
@@ -135,9 +135,9 @@ player createDiaryRecord ["credits",
 "
 Owner: [TLX] Unknown<br/>
 TS3 Info;<br/>
-Address: On right hand side :)<br/>
-Mission build: 1.4.5<br/>
-Current version developed by: D-Nice, [TLX] Lex_The_Great<br/>
+Address: ts.tlxgaming.com <br/>
+Mission build: 2.0<br/>
+Current version developed by: D-Nice, [TLX] Lex_The_Great, Strideynet<br/>
 Also special thanks to all the developers who made Takistan Life Revolution to what it is today<br/>
 "
 ]
@@ -149,7 +149,7 @@ player createDiaryRecord ["bugs",
 "
 Please report bugs to the Website or TS!<br/>
 Website: TLX-gaming.enjin.com <br/>
-Teamspeak: 162.248.91.190<br/>
+Teamspeak: ts.tlxgaming.com<br/>
 <br/>
 <br/>
 We look forward to playing with you!<br/>
@@ -219,7 +219,7 @@ player createDiaryRecord ["donations",
 [
 "Donations",
 "
-Use our Site or TS3 link to donate, don't forget to send your steam ID, ingame name, and name on the account used to donate!<br/> 
+Use our Site or TS3 link to donate, don't forget to send your steam ID, ingame name, and name on the account used to donate!<br/>
 Bitcoin, Litecoin or other cryptocurrencies accepted and given preferred rates!!!<br/>
 All supporter levels include supporter shop access and PMC license, although not all items in the supporter stores may be accessible for lower levels<br/>
 $10 = 3M Start + 100k extra salary<br/>
@@ -263,7 +263,7 @@ player createDiaryRecord ["rules",
 "Where to find our most up to date rules",
 "
 Go on our website at TLX-Gaming.enjin.com to find our most up to date rules list. <br/>
-Here is a direct link to it: http://tlx-gaming.enjin.com/rules 
+Here is a direct link to it: http://tlx-gaming.enjin.com/rules
 <br/>
 
 "
