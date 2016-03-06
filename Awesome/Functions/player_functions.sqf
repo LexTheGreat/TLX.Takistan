@@ -1455,7 +1455,7 @@ player_set_gear = {
 	if (typeName _backpack_magazines != "ARRAY") exitWith {};
 
 
-	if ((count _weapons) == 0 && (count _magazines) == 0 && (([_player] call player_cop) || ([_player] call player_opfor))) then {
+	if ((count _weapons) == 0 && (count _magazines) == 0 && (([_player] call player_cop) || ([_player] call player_opfor) || ([_player] call player_tnp))) then {
 		_magazines = CopStartGear_Mags;
 		_weapons = CopStartGear_Weap;
 	};
