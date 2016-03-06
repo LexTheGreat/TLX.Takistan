@@ -7000,7 +7000,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="stc";
-					init="removeallweapons this;this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 0.7];this disableAI ""move"";this disableAI ""anim"";this disableAI ""TARGET"";this disableAI ""AUTOTARGET"";";
+					init="removeallweapons this;this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 0.7];this disableAI ""move"";this disableAI ""anim"";this disableAI ""TARGET"";this disableAI ""AUTOTARGET""; this setVariable [""BIS_noCoreConversations"", true]; this disableAI ""FSM"";";
 					description="STNP Commander";
 				};
 				class Item1
@@ -7126,7 +7126,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="ntc";
-					init="removeallweapons this;this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 0.7];this disableAI ""move"";this disableAI ""anim"";this disableAI ""TARGET"";this disableAI ""AUTOTARGET"";";
+					init="removeallweapons this;this allowdamage false;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 0.7];this disableAI ""move"";this disableAI ""anim"";this disableAI ""TARGET"";this disableAI ""AUTOTARGET""; this setVariable [""BIS_noCoreConversations"", true]; this disableAI ""FSM"";";
 					description="NTNP Commander";
 				};
 				class Item1
