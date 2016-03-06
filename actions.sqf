@@ -34,7 +34,7 @@ action6 =	_role addaction ["Rob safe","bankrob.sqf", ["ausrauben", safe3],1,fals
 action8 = 	_role addaction ["Get Assassination job","assassination.sqf",["getajob_assassin"],1,false,true,"","player distance assassin <= 3 and isciv"];
 action9 =   _role addaction ["Escort VIP", "noscript.sqf", "[VIPtarget] join (group player); player groupchat ""Escort the VIP to the police base before he is assassinated!"";",1,false,true,"","player distance VIPtarget < 5 and iscop"];
 //========================================= Terror ====================================================
-actionTerror = 	_role addaction ["Declare Terror","noscript.sqf",'[] call player_set_terrorist',1,false,true,"","player distance terrorshop <= 10 and isciv and !ister"];
+//actionTerror = 	_role addaction ["Declare Terror","noscript.sqf",'[] call player_set_terrorist',1,false,true,"","player distance terrorshop <= 10 and isciv and !ister"];
 //========================================= HUNTING ===================================================
 action_h1 =  _role addaction ["Take boar meat","noscript.sqf",
 '_no = ceil(random 7);if (((call INV_GetOwnWeight) + ("boar" call INV_GetItemTypeKg)*_no) > INV_CarryingCapacity)exitwith{player groupChat localize "STRS_inv_buyitems_maxgewicht"};(nearestobjects [getpos player, ["wildboar"],  3] select 0) setvariable ["inuse", 1, true]; player playmove "AinvPknlMstpSlayWrflDnon_medic";sleep 4;waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"};deletevehicle (nearestobjects [getpos player, ["wildboar"],  3] select 0);[player, "boar", _no] call INV_AddInventoryItem;player groupchat format["you got %1 boar meat", _no];',
