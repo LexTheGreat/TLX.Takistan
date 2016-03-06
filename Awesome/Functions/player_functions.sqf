@@ -768,10 +768,10 @@ player_prison_loop_opf = { _this spawn {
 		_bail_left = ([_player] call player_get_bail) - _bail_payrate; //Deduct the pay off.
 
 		//only update the time and bail left every 30 seconds to avoid spamming the stats
-		if ((_time_left % 30) == 0) then {
+		//if ((_time_left % 30) == 0) then {
 			[_player, _bail_left] call player_set_bail;
 			[_player, "jailtimeleft", _time_left] call player_set_scalar;
-		};
+		//};
 
 		hintsilent format["Time until release\n%1 seconds\nBail left to pay\n$%2", _time_left, strM(_bail_left)];
 		//PLAYER DISAPPEARED ...
@@ -872,11 +872,11 @@ player_prison_loop = { _this spawn {
 	while {_time_left >= 0 && _bail_left >= 0} do {
 		_bail_left = ([_player] call player_get_bail) - _bail_payrate; //Deduct the pay off.
 
-		//only update the time and bail left every 30 seconds to avoid spamming the stats
-		if ((_time_left % 30) == 0) then {
+		//This would be preferable but a new algorithm would be needed. performance change seems negligible.
+		//if ((_time_left % 30) == 0) then {
 			[_player, _bail_left] call player_set_bail;
 			[_player, "jailtimeleft", _time_left] call player_set_scalar;
-		};
+		//};
 
 		hintsilent format["Time until release\n%1 seconds\nBail left to pay\n$%2", _time_left, strM(_bail_left)];
 		//PLAYER DISAPPEARED ...
