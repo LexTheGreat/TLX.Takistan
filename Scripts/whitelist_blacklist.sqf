@@ -134,9 +134,10 @@ if((_uid in opfblacklist) && (_side == east)) then {
 if((_uid in insblacklist) && (_side == resistance)) then {
 	player groupChat "You are Blacklisted from Insurgent!";
 	sleep 7;
-	failMission "END1";};
+	failMission "END1";
+};
 	
-if(isSupSlot !issup) then {
+if(isSupSlot && !issup) then {
 	player groupChat "You cannot join a Supporter slot without Supporter privileges!";
 	sleep 7;
 	failMission "END1";

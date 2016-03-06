@@ -4186,7 +4186,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ51";
-					description="Terrorist";
+					description="Terrorist (South Spawn)";
 				};
 			};
 		};
@@ -4208,7 +4208,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ53";
-					description="Terrorist";
+					description="Terrorist (South Spawn)";
 				};
 			};
 		};
@@ -4230,7 +4230,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ52";
-					description="Terrorist";
+					description="Terrorist (South Spawn)";
 				};
 			};
 		};
@@ -4252,7 +4252,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ54";
-					description="Terrorist";
+					description="Terrorist (South Spawn)";
 				};
 			};
 		};
@@ -6344,7 +6344,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ55";
-					description="Terrorist";
+					description="Terrorist (North Spawn)";
 				};
 			};
 		};
@@ -6366,7 +6366,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ56";
-					description="Terrorist";
+					description="Terrorist (North Spawn)";
 				};
 			};
 		};
@@ -6388,7 +6388,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ57";
-					description="Terrorist";
+					description="Terrorist (North Spawn)";
 				};
 			};
 		};
@@ -6410,7 +6410,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ58";
-					description="Terrorist";
+					description="Terrorist (North Spawn)";
 				};
 			};
 		};

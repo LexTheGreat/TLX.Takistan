@@ -2180,11 +2180,6 @@ player_init_arrays = {
 
 	tnpstringarray = tnpNstringarray + tnpSstringarray;
 
-	terroriststringarray =
-	[
-		"civ51", "civ52", "civ53", "civ54"
-	];
-
 	playerstringarray = civstringarray + unstringarray + opfstringarray;
 
 	role = _player;
@@ -2198,7 +2193,6 @@ player_init_arrays = {
 	isciv = [_player] call player_civilian;
 	isopf = [_player] call player_opfor;
 	istnp = [_player] call player_tnp;
-	isterror = [_player] call player_terror;
 
 	isNgov = isun || istnp || iscop;
 	isGov = isNgov || isopf || iscop;
@@ -2207,7 +2201,8 @@ player_init_arrays = {
 	isOpforRanked = (rolestring in ["opf1", "opf2"]);
 
 	isdog = (rolestring in ["civ36", "civ50"]);
-
+	isterror = (rolestring in ["civ51", "civ52", "civ53", "civ54", "civ55","civ56", "civ57", "civ58"]);
+	
 	isPmcSlot = (rolestring in ["civ59", "civ60", "civ61", "civ62", "civ63", "civ64"]);
 	issupSlot = (rolestring in [""]) || isPmcSlot;
 	isVipSlot = (rolestring in [""]);
