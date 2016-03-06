@@ -120,7 +120,7 @@ A_running              = false;
 A_actions              = compile preprocessfilelinenumbers "actions.sqf";
 A_actionsremove        = compile preprocessfilelinenumbers "actionsRemove.sqf";
 
-//huntingarray           = 
+//huntingarray           =
 //[
     //["hunting1", "Hunting Area 1 - Chickens, Cows",     500, ["Hen", "Cock", "Cow", "Cow01", "Cow02", "Cow03", "Cow04", "Cow01_EP1"], [35,5,5,5,5,5,5,5], [25,25,25,75,55,15,25,35]],
     //["hunting2", "Hunting Area 2 - Boars, Rabbits",     500, ["WildBoar", "Rabbit"], [35,50], [120,30]],
@@ -306,7 +306,7 @@ coppatrolarray  =
 
 
 
-if (iscop or isopf) then {
+if (iscop or isopf or istnp) then {
     [player, 'handy', 1] call INV_SetItemAmount;
     RadioTextMsg_1 = "Put your fucking hands up!";
     RadioTextMsg_2 = "Pull over and stay in your vehicle!";
@@ -329,7 +329,7 @@ publicarbeiterarctionarray = [];
 private["_i"];
 
 
-robpoolsafe1           = 0; 
+robpoolsafe1           = 0;
 robpoolsafe2           = 0;
 robpoolsafe3           = 0;
 deadtimebonus          = 0.001;
@@ -350,9 +350,9 @@ copteamkillstrafe        = 100000;
 GesetzAnzahl             = 10;
 if (isNil 'LawsArray') then {
 LawsArray              = [
-	"Always Drive on the RIGHT side of the road", 
+	"Always Drive on the RIGHT side of the road",
 	"70km/h in cities, 110km/h on rural roads",
-	"DON'T place buildings or hideouts on streets", 
+	"DON'T place buildings or hideouts on streets",
 	"Always Holster weapons in Towns 100k/1min jail.",
 	"Completing an assassination mission is murder"
 ];
@@ -512,7 +512,7 @@ marker_innerhalb         = 5;
 marker_CopDistance       = 50; //controls distance cops need to be to make civ dots appear outside of towns.
 CivMarkerUngenau         = 20;
 
-classmap = 
+classmap =
 [
 	["money", "EvMoney"],
 	["kanister", "Land_Canister_EP1"],
@@ -553,13 +553,13 @@ item2class = {
 	private["_item", "_class"];
 	_item = _this select 0;
 	_class = "Suitcase";
-	
+
 	//player groupChat format["item to class %1", _item];
 	if (isNil "_item") exitWith {_class};
 	if (typeName _item != "STRING") exitWith {_class};
-	
-	
-	{	
+
+
+	{
 		private["_cmap", "_citem", "_cclass"];
 		_cmap = _x;
 		_citem = _cmap select 0;
@@ -569,7 +569,7 @@ item2class = {
 			_class = _cclass;
 		};
 	} forEach classmap;
-	
+
 	_class
 };
 
@@ -625,7 +625,7 @@ terroristarray         = ["TK_GUE_Soldier_3_EP1","TK_GUE_Soldier_AAT_EP1","TK_GU
 if (isClient) then {
 	armed_vehicle_count = 0;
 	voice_stop = false;
-	
+
 	server_to_client_sync = player;
 	publicVariableServer "server_to_client_sync";
 };
