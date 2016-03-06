@@ -21,7 +21,7 @@ player createDiaryRecord ["specialitems",
 "Expensive Diamond Ring",
 "
 Needs:<br/>
-Diamond:15<br/>
+Diamond: 15<br/>
 Gold: 10<br/>
 "
 ]
@@ -135,9 +135,9 @@ player createDiaryRecord ["credits",
 "
 Owner: [TLX] Unknown<br/>
 TS3 Info;<br/>
-Address: On right hand side :)<br/>
-Mission build: 1.4.5<br/>
-Current version developed by: D-Nice, [TLX] Lex_The_Great<br/>
+Address: ts.tlxgaming.com <br/>
+Mission build: 2.0<br/>
+Current version developed by: D-Nice, [TLX] Lex_The_Great, Strideynet<br/>
 Also special thanks to all the developers who made Takistan Life Revolution to what it is today<br/>
 "
 ]
@@ -149,7 +149,7 @@ player createDiaryRecord ["bugs",
 "
 Please report bugs to the Website or TS!<br/>
 Website: TLX-gaming.enjin.com <br/>
-Teamspeak: 162.248.91.190<br/>
+Teamspeak: ts.tlxgaming.com<br/>
 <br/>
 <br/>
 We look forward to playing with you!<br/>
@@ -196,6 +196,9 @@ Move cursor over a vehicle to see what speed it is travelling at.
 E: Action<br/>
 The basic action button.  Used to interact with shops, ATM's, and other players (while they are stunned and/or restrained).
 <br/>
+Y: Animations<br/>
+Opens a UI that allows you to run different animations: Dance, Prance and Salute til your heart is content!
+<br/>
 T: Access Vehicle Trunk<br/>
 when you own a car or other vehicle, you can access that car's inventory by standing next to the car and pressing T.  You will then be shown two box's.  The left box is what is in the car, and the right box is what is in your inventory.  Highlight the object you want to transfer, then select the amount and press the button on the side that has the item.  Car's hold a certain amount of weight just like your charactor so be aware of what you stash in there.  Also, if your vehicle is destroyed then you will loose whatever you place in here.  Coppers can search for drugs or other ileagal items.  If they find them in your car it will disappear and the coppers gain money equal to the value of the drugs.
 <br/>
@@ -219,7 +222,7 @@ player createDiaryRecord ["donations",
 [
 "Donations",
 "
-Use our Site or TS3 link to donate, don't forget to send your steam ID, ingame name, and name on the account used to donate!<br/> 
+Use our Site or TS3 link to donate, don't forget to send your steam ID, ingame name, and name on the account used to donate!<br/>
 Bitcoin, Litecoin or other cryptocurrencies accepted and given preferred rates!!!<br/>
 All supporter levels include supporter shop access and PMC license, although not all items in the supporter stores may be accessible for lower levels<br/>
 $10 = 3M Start + 100k extra salary<br/>
@@ -263,7 +266,7 @@ player createDiaryRecord ["rules",
 "Where to find our most up to date rules",
 "
 Go on our website at TLX-Gaming.enjin.com to find our most up to date rules list. <br/>
-Here is a direct link to it: http://tlx-gaming.enjin.com/rules 
+Here is a direct link to it: http://tlx-gaming.enjin.com/rules
 <br/>
 
 "
