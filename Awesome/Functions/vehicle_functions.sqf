@@ -400,9 +400,17 @@ vehicle_set_modifications = {
 			processInitCommands;
 		};
 		case "SUV_UN_EP1_retex": {
-			xorE=true;
-			_vehicle setVehicleInit 'liafu = true; this setObjectTexture [0,"images\suvpolice.paa"]'; 
-			processInitCommands;
+			if (istnp) then {
+				xorE=true;
+				_vehicle setVehicleInit 'liafu = true; this setObjectTexture [0,"images\suvpolice.paa"]'; 
+				processInitCommands;
+			};
+			
+			if (iscop) then {
+				xorE=true;
+				_vehicle setVehicleInit 'liafu = true; this setObjectTexture [0,"images\suvnato.paa"]'; 
+				processInitCommands;
+			};
 		};
 		case "SUV_TK_EP1_vip": {
 			xorE=true;

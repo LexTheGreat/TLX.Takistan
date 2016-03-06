@@ -856,7 +856,7 @@ track_death = {
 		[_dp] call remove_licenses;
 		if (_killer_side == "Cop"||_killer_side == "Opfor") then {
 			//[_killer, "unarmedcivskilled", 1] call player_update_scalar;
-			format['
+			/*format['
 			[] spawn
             {
             if (player != %1) exitWith {};
@@ -876,7 +876,7 @@ track_death = {
 				failMission "END1";
 			};
 			};
-			', _killer] call broadcast;
+			', _killer] call broadcast;*/
 		};
 		[_dp, format["aggravated-crime%1", _qualifier], _bounty] call death_set_wanted; 
 	};
