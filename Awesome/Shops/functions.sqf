@@ -644,16 +644,16 @@ shop_buy_item_validate_data = {
 		[format["This item requires %1", (_license_4 call INV_GetLicenseName)], _quiet] call shop_set_status_message; nil
 	};
 	
-	if (_needsLicense && (iscop || istnp) && !(_license_2 call INV_HasLicense)) exitWith {
+	if (_needsLicense && isopf && !(_license_3 call INV_HasLicense)) exitWith {
+		[format["This item requires %1 %3", (_license_3 call INV_GetLicenseName)], _quiet, _license_3] call shop_set_status_message; nil
+	};
+	
+	if (_needsLicense && (iscop || istnp) && !isopf && !(_license_2 call INV_HasLicense)) exitWith {
 		[format["This item requires %1", (_license_2 call INV_GetLicenseName)], _quiet] call shop_set_status_message; nil
 	};
 	
-	if (_needsLicense && isciv && !istnp && !isterror && !(_license_1 call INV_HasLicense)) exitWith {
+	if (_needsLicense && isciv && !istnp && !isopf && !isterror && !(_license_1 call INV_HasLicense)) exitWith {
 		[format["This item requires %1", (_license_1 call INV_GetLicenseName)], _quiet] call shop_set_status_message; nil
-	};
-	
-	if (_needsLicense && isopf && !(_license_3 call INV_HasLicense)) exitWith {
-		[format["This item requires %1", (_license_3 call INV_GetLicenseName)], _quiet] call shop_set_status_message; nil
 	};
 	
 	if (_isIllegal && (iscop or isopf) ) exitWith {
