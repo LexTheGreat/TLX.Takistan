@@ -15,7 +15,7 @@ if (isdog) then {
 	lexisgreat3 = player addAction ["= Sniff Actions =", "noscript.sqf", ''];
 	lexisgreat4 = player addAction ["Sniff Humans", "noscript.sqf", 'if(!SniffCoolDown) then { systemChat "[Dog][Sniff]: You must wait to Sniff Humans."; } else { SniffCoolDown = false; _men = nearestobjects [getpos player, ["CAManBase"], 250] - [player]; systemChat format["== Sniffing... =="]; { if(isPlayer _x) then { systemChat format["[Dog]: %1, Distance: %2", name _x, player distance _x]; }; } forEach _men; sleep 1; SniffCoolDown = true; };'];
 	lexisgreat5 = player addAction ["Sniff IED", "noscript.sqf", 'if(!SniffCoolDown) then { systemChat "[Dog][Sniff]: You must wait to Sniff Bombs."; } else { systemChat format["== Sniffing... =="]; { SniffCoolDown = false;  _men = player nearObjects [_x, 250]; { systemChat format["[Dog]: Alert Bomb Smelt!, Distance: %1", player distance _x];} forEach _men; } forEach ["PipeBomb", "BAF_ied_v1", "BAF_ied_v2", "BAF_ied_v3", "BAF_ied_v4", "PMC_ied_v1", "PMC_ied_v2", "PMC_ied_v3", "PMC_ied_v4"]; sleep 1; SniffCoolDown = true; };'];
-};	
+};
 
 
 //====================================== HQ BOMB ======================================================
@@ -192,18 +192,18 @@ action80 = _role addaction ["Shop 2 export","noscript.sqf","[(shop2 call INV_Get
 action81 = _role addaction ["Shop 3 export","noscript.sqf","[(shop3 call INV_GetShopNum)] call shop_open_dialog;",1,false,true,"","player distance shop3export <= 3"];
 action82 = _role addaction ["Shop 4 export","noscript.sqf","[(shop4 call INV_GetShopNum)] call shop_open_dialog;",1,false,true,"","player distance shop4export <= 3"];
 //======================================= GANG GUNSHOPS ==================================================
-action83 = _role addaction ["Gang Shop", "noscript.sqf", 
-                            "[(gangarea1 call INV_GetShopNum)] call shop_open_dialog;", 
+action83 = _role addaction ["Gang Shop", "noscript.sqf",
+                            "[(gangarea1 call INV_GetShopNum)] call shop_open_dialog;",
 			    1, false,true,"",
 			    "_control = gangarea1 getvariable ""control"";!isnil ""_control"" and player distance gangarea1 <= 5 and (_control == (call INV_MyGang))"];
-							
-action84 = _role addaction ["Gang Shop", "noscript.sqf", 
-                            "[(gangarea2 call INV_GetShopNum)] call shop_open_dialog;", 
+
+action84 = _role addaction ["Gang Shop", "noscript.sqf",
+                            "[(gangarea2 call INV_GetShopNum)] call shop_open_dialog;",
 			    1, false,true,"",
 			    "_control = gangarea2 getvariable ""control"";!isnil ""_control"" and player distance gangarea2 <= 5 and (_control == (call INV_MyGang))"];
-							
-action85 = _role addaction ["Gang Shop", "noscript.sqf", 
-                            "[(gangarea3 call INV_GetShopNum)] call shop_open_dialog;", 
+
+action85 = _role addaction ["Gang Shop", "noscript.sqf",
+                            "[(gangarea3 call INV_GetShopNum)] call shop_open_dialog;",
 			    1, false,true,"",
 			    "_control = gangarea3 getvariable ""control"";!isnil ""_control"" and player distance gangarea3 <= 5 and (_control == (call INV_MyGang))"];
 //===================================== Gas station Robbing===============================================
@@ -220,8 +220,8 @@ gsshop9 = fuelshop9 addaction ["Rob Gas Station 9", "noscript.sqf", '[player, 9]
 action86 = _role addaction ["Unflip vehicle","noscript.sqf","_this call vehicle_unflip;",1,false,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and ([player, _vcl] call vehicle_owner)'];
 //=========================    Cop Patrol actions   ==============================
 // !TODO Change to TNP
-action87 = _role addaction["Get patrol mission","coppatrol.sqf",["start"],1,false,true,"","iscop and player distance copbank <= 4 and !pmissionactive and !patrolwaittime"];
-action88 = _role addaction["Cancel patrol mission","coppatrol.sqf",["end"],1,false,true,"","iscop and pmissionactive and player distance copbank <= 4"];
+action87 = _role addaction["Get patrol mission","coppatrol.sqf",["start"],1,false,true,"","(iscop or istnp) and (player distance copbank <= 4  or player distance and !pmissionactive and !patrolwaittime"];
+action88 = _role addaction["Cancel patrol mission","coppatrol.sqf",["end"],1,false,true,"","(iscop or istnp) and pmissionactive and player distance copbank <= 4"];
 //========================   HOSTAGE  ================================================
 action89 = _role addaction ["Take Hostage Mission","hostage.sqf",["getajob_hostage"],1,false,true,"","player distance hostage <= 3 and isciv"];
 action90 = _role addaction ["Take Hostage", "noscript.sqf", "[hostage1] join (group player); player groupchat ""Keep the hostage close or you will fail!"";",1,false,true,"","player distance hostage1 < 5 and isciv"];
