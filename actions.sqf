@@ -283,10 +283,10 @@ action107 = _role addaction ["Lower Gates","lgate10.sqf",[],1,false,true,"","pla
 action108 = _role addaction ["Lower Gates","lgate11.sqf",[],1,false,true,"","isopf and player distance opforgateb <= 5"];
 
 //========================   WAR COMMANDS  ================================================
-action121 = _role addaction ["Declare War against North", "Awesome\Functions\war_functions.sqf", ["start_war"], 1, false, true, "", "!warstatus && rolenumber == 73 && player distance atm5 < 20"];
-action122 = _role addaction ["Sign ceasefire with North", "noscript.sqf",'warstatusopf = false;publicVariableServer "warstatusopf";',1, false, true, "", "warstatus && warstatusopf && rolenumber == 77"];
-action123 = _role addaction ["Sign ceasefire with TLA", "noscript.sqf",'warstatuscop = false;publicVariableServer "warstatuscop";',1, false, true, "", "warstatus && warstatuscop && ischief"];
-action124 = _role addaction ["Declare/Lift Martial Law in North Takistan", "Awesome\Functions\war_functions.sqf", ["start_martial"],1, false, true, "", "ischief && player distance copbank < 20"];
+action121 = _role addaction ["Declare War against North", "Awesome\Functions\war_functions.sqf", ["start_war"], 1, false, true, "", "!warstatus && isOpforRanked && player distance atm5 < 20"];
+action122 = _role addaction ["Sign ceasefire with North", "noscript.sqf",'warstatusopf = false;publicVariableServer "warstatusopf";',1, false, true, "", "warstatus && warstatusopf && isOpforRanked"];
+action123 = _role addaction ["Sign ceasefire with TLA", "noscript.sqf",'warstatuscop = false;publicVariableServer "warstatuscop";',1, false, true, "", "warstatus && warstatuscop && isBluforRanked"];
+action124 = _role addaction ["Declare/Lift Martial Law in North Takistan", "Awesome\Functions\war_functions.sqf", ["start_martial"],1, false, true, "", "isBluforRanked && player distance copbank < 20"];
 action125 = _role addaction ["Activate Radar", "Awesome\Functions\radar_function.sqf", [], 1, false, true, "", "(!radarActive && rolenumber == 74 && player distance atm5 < 20)||(!radarActive && rolenumber == 92 && player distance copbank < 20)"];
 //======================== Zone Commands
 opforZoneAction = _role addaction ["Cap/Neutralize Anar City", "noscript.sqf", "['opforZone',opforZoneFlag,'opforFlag'] call zone_capture;",1,false,true,"","!isciv && player distance opforZoneFlag < 5 && side player != ['opforZone'] call zone_getOwner"];
