@@ -2188,14 +2188,14 @@ player_init_arrays = {
 
 	//player groupChat["role = %1, rolestring = %2,  rolenumber = %3", role, rolestring, rolenumber];
 
-	isun = [_player] call player_cop;
-	iscop = isun; // Deprecated support, move on lex!
+	isNato = [_player] call player_cop;
+	iscop = isNato; // Deprecated support, move on lex!
 	isciv = [_player] call player_civilian;
 	isopf = [_player] call player_opfor;
 	istnp = [_player] call player_tnp;
 
-	isNgov = isun || istnp || iscop;
-	isGov = isNgov || isopf || iscop;
+	isNgov = isNato || istnp;
+	isGov = isNgov || isopf;
 
 	isBluforRanked = (rolestring in ["un1", "un2", "un3"]);
 	isOpforRanked = (rolestring in ["opf1", "opf2"]);
