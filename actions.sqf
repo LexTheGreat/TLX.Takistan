@@ -220,8 +220,8 @@ gsshop9 = fuelshop9 addaction ["Rob Gas Station 9", "noscript.sqf", '[player, 9]
 action86 = _role addaction ["Unflip vehicle","noscript.sqf","_this call vehicle_unflip;",1,false,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and ([player, _vcl] call vehicle_owner)'];
 //=========================    Cop Patrol actions   ==============================
 // !TODO Change to TNP
-action87 = _role addaction["Get patrol mission","coppatrol.sqf",["start"],1,false,true,"","(iscop or istnp) and (player distance copbank <= 4  or player distance and !pmissionactive and !patrolwaittime"];
-action88 = _role addaction["Cancel patrol mission","coppatrol.sqf",["end"],1,false,true,"","(iscop or istnp) and pmissionactive and player distance copbank <= 4"];
+action87 = _role addaction["Get patrol mission","coppatrol.sqf",["start"],1,false,true,"","isNgov and (player distance copbank <= 4  or player distance atmtnpnc <= 4 or player distance atmtnpsc <= 4) and !pmissionactive and !patrolwaittime"];
+action88 = _role addaction["Cancel patrol mission","coppatrol.sqf",["end"],1,false,true,"","isNgov and pmissionactive and (player distance copbank <= 4  or player distance atmtnpnc <= 4 or player distance atmtnpsc <= 4)"];
 //========================   HOSTAGE  ================================================
 action89 = _role addaction ["Take Hostage Mission","hostage.sqf",["getajob_hostage"],1,false,true,"","player distance hostage <= 3 and isciv"];
 action90 = _role addaction ["Take Hostage", "noscript.sqf", "[hostage1] join (group player); player groupchat ""Keep the hostage close or you will fail!"";",1,false,true,"","player distance hostage1 < 5 and isciv"];
