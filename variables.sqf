@@ -306,7 +306,7 @@ coppatrolarray  =
 
 
 
-if (iscop or isopf or istnp) then {
+if (isGov) then {
     [player, 'handy', 1] call INV_SetItemAmount;
     RadioTextMsg_1 = "Put your fucking hands up!";
     RadioTextMsg_2 = "Pull over and stay in your vehicle!";

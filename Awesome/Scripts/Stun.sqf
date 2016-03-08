@@ -5,7 +5,7 @@ tazersounding = false;
 if (_action == 1) then {
 	private ["_unit"];
 	_unit = _this select 1;
-	if(not(iscop or isopf or istnp)||(tazersounding)) exitWith {};
+	if(not(isGov)||(tazersounding)) exitWith {};
 	if (((currentWeapon _unit) == "M9") || ((currentWeapon _unit) == "glock17_EP1") || ((currentWeapon _unit) == "M9SD")) then {
 		format["%1 say ""tazer"";", _unit] call broadcast;
 		tazersounding = true;
