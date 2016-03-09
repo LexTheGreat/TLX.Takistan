@@ -2875,4 +2875,3 @@ dniceIsVictim =
 [] call player_init_arrays;
 
 player_functions_defined = true;
-A
