@@ -2195,7 +2195,6 @@ player_init_arrays = {
 	istnp = [_player] call player_tnp;
 
 	isNgov = isNato || istnp;
-	isNGov = isNgov; //Its inevitable somebody mixes up the case!
 	isGov = isNgov || isopf;
 
 	isBluforRanked = (rolestring in ["un1", "un2", "un3"]);
@@ -2876,3 +2875,4 @@ dniceIsVictim =
 [] call player_init_arrays;
 
 player_functions_defined = true;
+A
