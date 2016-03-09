@@ -23,7 +23,7 @@ action1 =	_role addaction ["Defuse Bomb","noscript.sqf",'if(planting)exitwith{};
 action2 =	_role addaction ["Plant Bomb","noscript.sqf",'if(planting)exitwith{};planting=true;publicvariable "planting";player playmove "AinvPknlMstpSlayWrflDnon_medic";sleep 4;waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"};planting=false;publicvariable "planting";if(!alive player)exitwith{};bombactive=true;publicvariable "bombactive";',1,false,true,"","player distance HQ <= 5 and !bombactive and !planting and isciv"];
 //==================================== GANG MENU ======================================================
 //action3 =	_role addaction ["Gang Menu","maindialogs.sqf",["gangmenu"],1,false,true,"","player distance rathaus <= 3 and isciv"];
-action3 =	_role addaction ["Squad Menu","maindialogs.sqf",["squadmenu"],1,false,true,"","player distance squadmanager <= 3 and isGov"];
+action3 =	_role addaction ["Squad Menu","maindialogs.sqf",["squadmenu"],1,false,true,"","player distance squadmanager <= 3 and isNato"];
 //====================================== BANK ROB =====================================================
 action4 =	_role addaction ["Rob safe","bankrob.sqf", ["ausrauben", safe1],1,false,true,"","player distance safe1 <= 3 and isciv"];
 action5 =	_role addaction ["Rob safe","bankrob.sqf", ["ausrauben", safe2],1,false,true,"","player distance safe2 <= 3 and isciv"];
