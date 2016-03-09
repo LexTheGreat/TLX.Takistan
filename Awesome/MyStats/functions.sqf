@@ -204,7 +204,8 @@ stats_get_faction = {
 	private["_side"];
 	_side = [_player] call player_human_side;
 	if (_side == east) exitWith {"Opfor"};
-	if (_side == west) exitWith {"Cop"};
+	if (_side == west) exitWith {"Cop"}; // TODO Change to Blufor, will break code.
+	if ([_player] call player_tnp) exitWith {"TNP"}; // TODO This *WILL* break code, fix before release
 	if (_side == civilian) exitWith {"Civilian"};
 	if (_side == resistance) exitWith {"Insurgent"};
 	""
