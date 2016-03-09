@@ -23,7 +23,7 @@ action1 =	_role addaction ["Defuse Bomb","noscript.sqf",'if(planting)exitwith{};
 action2 =	_role addaction ["Plant Bomb","noscript.sqf",'if(planting)exitwith{};planting=true;publicvariable "planting";player playmove "AinvPknlMstpSlayWrflDnon_medic";sleep 4;waituntil {animationstate player != "AinvPknlMstpSlayWrflDnon_medic"};planting=false;publicvariable "planting";if(!alive player)exitwith{};bombactive=true;publicvariable "bombactive";',1,false,true,"","player distance HQ <= 5 and !bombactive and !planting and isciv"];
 //==================================== GANG MENU ======================================================
 //action3 =	_role addaction ["Gang Menu","maindialogs.sqf",["gangmenu"],1,false,true,"","player distance rathaus <= 3 and isciv"];
-action3 =	_role addaction ["Squad Menu","maindialogs.sqf",["squadmenu"],1,false,true,"","player distance squadmanager <= 3 and iscop"];
+action3 =	_role addaction ["Squad Menu","maindialogs.sqf",["squadmenu"],1,false,true,"","player distance squadmanager <= 3 and isNato"];
 //====================================== BANK ROB =====================================================
 action4 =	_role addaction ["Rob safe","bankrob.sqf", ["ausrauben", safe1],1,false,true,"","player distance safe1 <= 3 and isciv"];
 action5 =	_role addaction ["Rob safe","bankrob.sqf", ["ausrauben", safe2],1,false,true,"","player distance safe2 <= 3 and isciv"];
@@ -32,7 +32,7 @@ action6 =	_role addaction ["Rob safe","bankrob.sqf", ["ausrauben", safe3],1,fals
 //action7 = 	_role addaction ["Holster Rifle","\noscript.sqf",[""],1,false,true,"",'player distance workplacejob_deliveryflag3 <= 4'];
 //===================================== ASSASSINATION =================================================
 action8 = 	_role addaction ["Get Assassination job","assassination.sqf",["getajob_assassin"],1,false,true,"","player distance assassin <= 3 and isciv"];
-action9 =   _role addaction ["Escort VIP", "noscript.sqf", "[VIPtarget] join (group player); player groupchat ""Escort the VIP to the police base before he is assassinated!"";",1,false,true,"","player distance VIPtarget < 5 and iscop"];
+action9 =   _role addaction ["Escort VIP", "noscript.sqf", "[VIPtarget] join (group player); player groupchat ""Escort the VIP to the police base before he is assassinated!"";",1,false,true,"","player distance VIPtarget < 5 and isNgov"];
 //========================================= Terror ====================================================
 //actionTerror = 	_role addaction ["Declare Terror","noscript.sqf",'[] call player_set_terrorist',1,false,true,"","player distance terrorshop <= 10 and isciv and !ister"];
 //========================================= HUNTING ===================================================
@@ -207,15 +207,15 @@ action85 = _role addaction ["Gang Shop", "noscript.sqf",
 			    1, false,true,"",
 			    "_control = gangarea3 getvariable ""control"";!isnil ""_control"" and player distance gangarea3 <= 5 and (_control == (call INV_MyGang))"];
 //===================================== Gas station Robbing===============================================
-gsshop1 = fuelshop1 addaction ["Rob Gas Station 1", "noscript.sqf", '[player, 1] call player_rob_station', 1, false, true, ""," not(iscop) && station1money >= 10000"];
-gsshop2 = fuelshop2 addaction ["Rob Gas Station 2", "noscript.sqf", '[player, 2] call player_rob_station', 1, false, true, ""," not(iscop) && station2money >= 10000"];
-gsshop3 = fuelshop3 addaction ["Rob Gas Station 3", "noscript.sqf", '[player, 3] call player_rob_station', 1, false, true, "",  "not(iscop) && station3money >= 10000"];
-gsshop4 = fuelshop4 addaction ["Rob Gas Station 4", "noscript.sqf", '[player, 4] call player_rob_station', 1, false, true, "", "not(iscop) && station4money >= 10000"];
-gsshop5 = fuelshop5 addaction ["Rob Gas Station 5", "noscript.sqf", '[player, 5] call player_rob_station', 1, false, true, "", "not(iscop) && station5money >= 10000"];
-gsshop6 = fuelshop6 addaction ["Rob Gas Station 6", "noscript.sqf", '[player, 6] call player_rob_station', 1, false, true, "", "not(iscop) && station6money >= 10000"];
-gsshop7 = fuelshop7 addaction ["Rob Gas Station 7", "noscript.sqf", '[player, 7] call player_rob_station', 1, false, true, "", "not(iscop) && station7money >= 10000"];
-gsshop8 = fuelshop8 addaction ["Rob Gas Station 8", "noscript.sqf", '[player, 8] call player_rob_station', 1, false, true, "", "not(iscop) && station8money >= 10000"];
-gsshop9 = fuelshop9 addaction ["Rob Gas Station 9", "noscript.sqf", '[player, 9] call player_rob_station', 1, false, true, "", "not(iscop) && station9money >= 10000"];
+gsshop1 = fuelshop1 addaction ["Rob Gas Station 1", "noscript.sqf", '[player, 1] call player_rob_station', 1, false, true, ""," not(isGov) && station1money >= 10000"];
+gsshop2 = fuelshop2 addaction ["Rob Gas Station 2", "noscript.sqf", '[player, 2] call player_rob_station', 1, false, true, ""," not(isGov) && station2money >= 10000"];
+gsshop3 = fuelshop3 addaction ["Rob Gas Station 3", "noscript.sqf", '[player, 3] call player_rob_station', 1, false, true, "",  "not(isGov) && station3money >= 10000"];
+gsshop4 = fuelshop4 addaction ["Rob Gas Station 4", "noscript.sqf", '[player, 4] call player_rob_station', 1, false, true, "", "not(isGov) && station4money >= 10000"];
+gsshop5 = fuelshop5 addaction ["Rob Gas Station 5", "noscript.sqf", '[player, 5] call player_rob_station', 1, false, true, "", "not(isGov) && station5money >= 10000"];
+gsshop6 = fuelshop6 addaction ["Rob Gas Station 6", "noscript.sqf", '[player, 6] call player_rob_station', 1, false, true, "", "not(isGov) && station6money >= 10000"];
+gsshop7 = fuelshop7 addaction ["Rob Gas Station 7", "noscript.sqf", '[player, 7] call player_rob_station', 1, false, true, "", "not(isGov) && station7money >= 10000"];
+gsshop8 = fuelshop8 addaction ["Rob Gas Station 8", "noscript.sqf", '[player, 8] call player_rob_station', 1, false, true, "", "not(isGov) && station8money >= 10000"];
+gsshop9 = fuelshop9 addaction ["Rob Gas Station 9", "noscript.sqf", '[player, 9] call player_rob_station', 1, false, true, "", "not(isGov) && station9money >= 10000"];
 //========================   unflip vehicle     ================================
 action86 = _role addaction ["Unflip vehicle","noscript.sqf","_this call vehicle_unflip;",1,false,true,"",'_vcl = (nearestobjects [getpos player, ["Air", "Ship", "LandVehicle"], 3] select 0);player distance _vcl < 5 and ([player, _vcl] call vehicle_owner)'];
 //=========================    Cop Patrol actions   ==============================

@@ -144,7 +144,7 @@ supporters1 	  = [
 					"76561198058705691", //MrDiddlez
 					"76561198092131123", //JacksonS
 					"76561198035501607", //bagabuga / Dylan
-					"76561198065161712", //Noah Stride
+					"76561198065161712", //Strideynet
 					"76561198031702276", //xStrike
 					"76561198021266045", //theonematrix9
 					"76561197977670019", //Abdul-Kadir Raheem
@@ -160,7 +160,7 @@ supporters1 	  = [
 					"76561198058867346", //cornholio Enjin
 					"76561198046739351", //savage enjin
 					"76561198185151139", //Jasmer 10M
-					"76561198015234133", //rjestings 
+					"76561198015234133", //rjestings
 					"76561198056613268", //TylerHansen
 					"76561198055195826", //A-JAY
 					"76561198056818686", //Leothaid
@@ -235,7 +235,7 @@ supporters2 	  = [
 					"76561198139855195", //Murphy
 					"76561198006806376", //TonyMontana
 					"76561198137657512", //Pak X Ehm
-					"76561198153442863", //Hudson Riggs	
+					"76561198153442863", //Hudson Riggs
 					"76561198026872762", //Danny
 					"76561198080526121", //ExoticAnus
 					"76561198132886280", //Ice Mummy
@@ -244,7 +244,7 @@ supporters2 	  = [
 					"76561198102125657", //Edward UnknowingFrk Martinz
 					"76561198132242997", //MPxLuna possible scammer
 					"76561198065361202", //LifeShifter
-					"76561198096275577", //Henry Hill Liz Beckett 
+					"76561198096275577", //Henry Hill Liz Beckett
 					"76561198112412098", //Sgt Dragon
 					"76561197974500553", //HarvisTraley
 					"76561198059732869", //Pvt. Reggie
@@ -357,8 +357,8 @@ supporters3  	  = [
 				"76561198085630212", //TMC Barkuz
 				"76561198007560382", //Zraka upped
 				"76561198040908402", //MattMax509
-				"76561198035613411", //The Meat Cleaver	
-				"76561198015531909", //Paltala		
+				"76561198035613411", //The Meat Cleaver
+				"76561198015531909", //Paltala
 				"76561198092417819", //Scorches
 				"76561198035381118", //Bermis Wukun
 				"76561198059086202", //Christian 1899march
@@ -435,7 +435,7 @@ supportersVIP     = [
 				"76561198074752188", //Muzammil Zaffar Mujahid
 				"76561198085563991", //Masuk Hussein Crow
 				"76561198017822314", //Morvistic
-				"76561198047477296", //Jamal Nippleham	
+				"76561198047477296", //Jamal Nippleham
 				"76561198165712571", //MSGT-sniper-is-back
 				"76561197973705584", //dookiepower enjin
 				"76561198020927252", //BOGAR THE VIKING
@@ -466,6 +466,5 @@ supportersVIP     = [
 				"76561198134919635", //Lordwookie
 				"76561198041119029", //Sgt. Ryan
 				"76561198089072949"  //KAAAAAAYLE
-			
-			];
 
+			];
