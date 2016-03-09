@@ -835,9 +835,8 @@ track_death = {
 	suicided = _suicide;
 	if (_suicide) exitWith { 
 		//no punishment here for suicide
-	};
-	
-	if (_killer_side == "Cop"||_killer_side == "Opfor") then {
+	} else {
+		// Reset Warrants if isn't suicide
 		[_victim] call player_reset_warrants;
 	};
 	
@@ -967,13 +966,16 @@ victim = {
 			_message = format["%1 was killed by the Takistan Liberation Army!", _victim_name];
 		};
 
-		if([_killer] call player_cop) exitWith {
-			_message = format["%1 was killed by the UN Stabilization Forces!", _victim_name];
+		if([_killer] call player_blufor) exitWith {
+			_message = format["%1 was killed by the NATO Forces!", _victim_name];
 		};
 
+		if([_killer] call player_tnp) exitWith {
+			_message = format["%1 was killed by the Takistan National Police!", _victim_name];
+		};
 		
-		if([_killer] call player_insurgent) exitWith {
-			_message = format["%1 was killed by the Insurgents!", _victim_name];
+		if([_killer] call player_terror) exitWith {
+			_message = format["%1 was killed by a Terrorist!", _victim_name];
 		};
 		
 		if (not(isNil "_message")) then {
