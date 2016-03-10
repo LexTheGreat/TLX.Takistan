@@ -11,7 +11,7 @@ SpeedGun_loop = {
 	if (!(isGov)) exitWith {};
 	waitUntil {!isNil "SG_ON"};
 	while {true} do {
-		if (SG_ON && (iscop or isopf) && INV_shortcuts) then {
+		if (SG_ON && (isgov) && INV_shortcuts) then {
 			/*(_vehicle = vehicle player;*/
 			_bool	= call holster_pistol_in_hands;
 

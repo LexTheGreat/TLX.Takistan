@@ -260,6 +260,9 @@ if (_art == "spielerliste") then {
 				if(_uid in supportersVIP) then {
 					_supstatus = " --- VIP";
 				};
+				if([_player] call player_terror) then {
+					_supstatus = _supstatus + " * Terrorist"
+				};
 				_label_text = format ["%1: %2 |-| $%3%4", _player, (name _player), strM(_money), _supstatus];
 			}
 			else {

@@ -53,7 +53,15 @@ player_opfor = {
 	(([_player] call player_side) == east)
 };
 
+// Make deprecation support, TODO Change player_cop to player_blufor
 player_cop = {
+	private["_player"];
+	_player = _this select 0;
+	
+	([_player] call player_blufor)
+};
+
+player_blufor = {
 	private["_player"];
 	_player = _this select 0;
 	if (isNil "_player") exitWith { };
