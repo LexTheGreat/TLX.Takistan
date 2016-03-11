@@ -137,7 +137,7 @@ Owner: [TLX] Unknown<br/>
 TS3 Info;<br/>
 Address: ts.tlxgaming.com <br/>
 Mission build: 2.0<br/>
-Current version developed by: D-Nice, [TLX] Lex_The_Great, Strideynet<br/>
+Credits: Prior Takistan Life Developers (The mission base), D-Nice (Edits, fixes), [TLX] Lex_The_Great (Edits, fixes, implementations), Hoto (Map, implementations), Strideynet (Fixes)<br/>
 Also special thanks to all the developers who made Takistan Life Revolution to what it is today<br/>
 "
 ]
