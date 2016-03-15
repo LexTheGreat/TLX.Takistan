@@ -10,7 +10,8 @@ if(_art == "use")then
 if(_vcl == player)exitwith{player groupchat "you must be in a vehicle"};
 if(!(_vcl iskindof "car"))exitwith{player groupchat "you cannot tune this vehicle"};
 
-if (({_vcl isKindOf _x} count ["BRDM2_Base","BTR90_Base","LAV25_Base","HMMWV_M1151_M2_DES_Base_EP1","StrykerBase_EP1"]
+// ,"HMMWV_M1151_M2_DES_Base_EP1" TODO: Find effected HMMWV Types
+if (({_vcl isKindOf _x} count ["BRDM2_Base","BTR90_Base","LAV25_Base","StrykerBase_EP1"]
 ) > 0) exitwith {player groupchat "you cannot tune this vehicle"};
 
 [player, _item, -1] call INV_AddInventoryItem;
