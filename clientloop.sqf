@@ -508,7 +508,7 @@ check_restrains = {
 		if(vehicle player != player) then { // Eject restrained players
 	    	player action ["Eject", vehicle player];
 	    };
-		if (not([player, 50] call player_near_cops) && not([player, 50] call player_near_opf)) then {
+		if (not([player, 50] call player_near_cops) && not([player, 50] call player_near_opf) && not([player, 50] call player_near_tnp)) then {
 			[player, "restrained", false] call player_set_bool;
 			player groupChat format["You have managed to unrestrain yourself!"];
 		};
