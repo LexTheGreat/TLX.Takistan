@@ -2205,7 +2205,7 @@ player_init_arrays = {
 	isNgov = isNato || istnp;
 	isGov = isNgov || isopf;
 
-	isBluforRanked = (rolestring in ["un1", "un2", "un3"]);
+	isBluforRanked = (rolestring in ["Blu1", "Blu2", "Blu3"]);
 	isOpforRanked = (rolestring in ["opf1", "opf2"]);
 
 	isdog = (rolestring in ["civ36", "civ50"]);
