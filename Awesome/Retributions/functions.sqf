@@ -1023,6 +1023,16 @@ track_retributions = {
 		_victim_name == "Error: No unit") exitWith {};
 	
 	//player groupChat format["JUST: %1", _justified];
+	if (isterror && ![_killer] call player_terror) exitWith {
+		// Skip everything else and do Nothing, Player was terror, also wasn't team kill.
+	};
+	
+	if (isterror && [_killer] call player_terror) exitWith {
+		// Terror killed another Terror, team kill
+		[_killer, "TK"] call add_killer;
+		player_unfair_killed = true;
+	};
+	
 	if ((_victim_side == "Civilian") && !_justified) exitWith {
 		[_killer, "DM"] call add_killer;
 		player_unfair_killed = true;
