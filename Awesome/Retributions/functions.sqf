@@ -662,7 +662,7 @@ death_set_wanted = {
 	_victim_name = _dp select dp_victim_name;
 	_killer = _dp select dp_killer;
 	
-	if (_killer_side == "Cop") exitWith {};
+	if ([_killer] call player_gov) exitWith {};
 	
 	private["_vehicle_str"];
 	_vehicle_str = if (_roadkill) then { ", vehicle" } else {""};
