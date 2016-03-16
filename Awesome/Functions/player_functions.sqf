@@ -39,6 +39,14 @@ player_side = {
 	([_player] call player_ai_side)
 };
 
+player_gov = {
+	private["_player"];
+	_player = _this select 0;
+	if (isNil "_player") exitWith {};
+	
+	([_player] call player_opfor || [_player] call player_blufor || [_player] call player_tnp)
+};
+
 player_civilian = {
 	private["_player"];
 	_player = _this select 0;
