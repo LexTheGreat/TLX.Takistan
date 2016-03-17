@@ -1480,7 +1480,7 @@ player_set_gear = {
 	if (typeName _backpack_magazines != "ARRAY") exitWith {};
 
 
-	if ((count _weapons) == 0 && (count _magazines) == 0 && (([_player] call player_cop) || ([_player] call player_opfor) || ([_player] call player_tnp))) then {
+	if ((count _weapons) == 0 && (count _magazines) == 0 && (([_player] call player_blufor) || ([_player] call player_opfor) || ([_player] call player_tnp))) then {
 		_magazines = CopStartGear_Mags;
 		_weapons = CopStartGear_Weap;
 	};
@@ -2215,7 +2215,7 @@ player_init_arrays = {
 
 	//player groupChat["role = %1, rolestring = %2,  rolenumber = %3", role, rolestring, rolenumber];
 
-	isNato = [_player] call player_cop;
+	isNato = [_player] call player_blufor;
 	iscop = isNato; // Deprecated support, move on lex!
 	isciv = [_player] call player_civilian;
 	isopf = [_player] call player_opfor;
@@ -2648,7 +2648,7 @@ player_spawn = { _this spawn {
 		[_player] call player_intro_text;
 	};
 
-	if (not(_first_time) && ([_player] call player_cop)) then {
+	if (not(_first_time) && ([_player] call player_blufor)) then {
 		[_player] call player_load_side_gear;
 	};
 
@@ -2700,7 +2700,7 @@ player_drop_inventory = {
 	_player = _this select 0;
 	if (not([_player] call player_exists)) exitWith {};
 
-	if ([_player] call player_cop or [_player] call player_tnp) then {
+	if ([_player] call player_blufor or [_player] call player_tnp) then {
 		private["_amount"];
 		_amount = ([player, "money"] call INV_GetItemAmount);
 		if (_amount <= 0) exitWith {};
@@ -2807,7 +2807,7 @@ player_init_civilian_stats = {
 player_init_cop_stats = {
 	private["_player"];
 	_player = _this select 0;
-	if (not([_player] call player_cop or [_player] call player_tnp)) exitWith {};
+	if (not([_player] call player_blufor or [_player] call player_tnp)) exitWith {};
 
 	private["_gasmask_on"];
 	_gasmask_on = ([player, "gasmask_on"] call INV_GetItemAmount > 0);
