@@ -109,7 +109,16 @@ player_terror = {
 	if (isNil "_player") exitWith { };
 
 	_rolestring = toLower(str(_player));
-	(_rolestring in terroriststringarray)
+	(_rolestring in terrorReferenceArray)
+};
+
+player_dog = {
+	private["_player", "_rolestring"];
+	_player = _this select 0;
+	if (isNil "_player") exitWith { };
+
+	_rolestring = toLower(str(_player));
+	(_rolestring in dogReferenceArray)
 };
 
 player_get_dead = {
@@ -2193,6 +2202,8 @@ player_init_arrays = {
 	[
 		"civ43", "civ44", "civ45", "civ46", "civ47", "civ48", "civ49", "civ50"
 	];
+	
+	
 
 	tnpstringarray = tnpNstringarray + tnpSstringarray;
 
@@ -2212,17 +2223,28 @@ player_init_arrays = {
 
 	isNgov = isNato || istnp;
 	isGov = isNgov || isopf;
+	
+	// References
+	terrorReferenceArray = ["civ51", "civ52", "civ53", "civ54", "civ55","civ56", "civ57", "civ58"]; // Terrors Slots
+	dogReferenceArray = ["civ36", "civ50"]; // Dog Slots
+	pmcReferenceArray = ["civ59", "civ60", "civ61", "civ62", "civ63", "civ64"]; // Pmc Slots (Sup Only)
+	bRankReferenceArray = ["Blu1", "Blu2", "Blu3"]; // Leader slots on BLU
+	oRankReferenceArray = ["opf1", "opf2"]; // Leader slots on Opf
+	supReferenceArray = []; // Sup Slots, already includes PMC slots.
+	vipReferenceArray = []; // VIP Slots
+	admReferenceArray = []; // Staff Only Slots
+	//
+	
+	isBluforRanked = (rolestring in bRankReferenceArray);
+	isOpforRanked = (rolestring in oRankReferenceArray);
+	
+	isdog = (rolestring in dogReferenceArray);
+	isterror = (rolestring in terrorReferenceArray);
 
-	isBluforRanked = (rolestring in ["Blu1", "Blu2", "Blu3"]);
-	isOpforRanked = (rolestring in ["opf1", "opf2"]);
-
-	isdog = (rolestring in ["civ36", "civ50"]);
-	isterror = (rolestring in ["civ51", "civ52", "civ53", "civ54", "civ55","civ56", "civ57", "civ58"]);
-
-	isPmcSlot = (rolestring in ["civ59", "civ60", "civ61", "civ62", "civ63", "civ64"]);
-	issupSlot = (rolestring in [""]) || isPmcSlot;
-	isVipSlot = (rolestring in [""]);
-	isAdminSlot = (rolestring in [""]);
+	isPmcSlot = (rolestring in pmcReferenceArray);
+	issupSlot = (rolestring in supReferenceArray) || isPmcSlot;
+	isVipSlot = (rolestring in vipReferenceArray);
+	isAdminSlot = (rolestring in admReferenceArray);
 
 	_player addMPEventHandler ["MPKilled", { _this call player_handle_mpkilled }];
 	_player addMPEventHandler ["MPRespawn", { _this call player_handle_mprespawn }];
