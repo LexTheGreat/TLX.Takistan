@@ -138,7 +138,7 @@ Clothes =
 ["CZ_BONG",					"GER_Soldier_MG_EP1",			"Bong Lord",						    west, 			"BIS",			iscop,		500000,		["bonglicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_COLE",					"US_Delta_Force_Undercover_Takistani06_EP1",			"The Original Bond",						    west, 			"BIS",			iscop,		500000,		["colelicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_RECK",					"GER_Soldier_TL_EP1",			"The Recker",						    west, 			"BIS",			iscop,		500000,		["recklicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
-["CZ_NORD",					"US_Delta_Force_Marksman_EP1",			"Martin the Nord",						    west, 			"BIS",			iscop,		500000,		["nordlicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
+["CZ_NORD",					"GER_Soldier_Scout_EP1",			"Martin the Nord",						    west, 			"BIS",			iscop,		500000,		["nordlicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_SHEP",					"GER_Soldier_TL_EP1",			"Shep Herder",						    west, 			"BIS",			iscop,		500000,		["sheplicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_WOLF",					"US_Delta_Force_Undercover_Takistani06_EP1",			"Undercover Wolf",						    west, 			"BIS",			iscop,		500000,		["wolflicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 
