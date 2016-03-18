@@ -275,7 +275,7 @@ action98 = _role addaction ["Raise Gates","rgate4.sqf",[],1,false,true,"","isNat
 action99 = _role addaction ["Lower Gates","lgate4.sqf",[],1,false,true,"","player distance copgate4 <= 5"];
 action100 = _role addaction ["<t color='#FF0000'>Lower Gates</t>","lgate5.sqf",[],1,false,true,"","player distance pmcgatec1 <= 7 and (""pmc_license_journeyman"" call INV_HasLicense)"];
 action101 = _role addaction ["Lower Gates","lgate6.sqf",[],1,false,true,"","isciv and player distance terrgate <= 5"];
-action102 = _role addaction ["Raise Gates","rgate5.sqf",[],1,false,true,"","isins and player distance opforgate2 <= 5"];
+action102 = _role addaction ["Raise Gates","rgate5.sqf",[],1,false,true,"","isterror and player distance opforgate2 <= 5"];
 action103 = _role addaction ["Lower Gates","lgate8.sqf",[],1,false,true,"","player distance opforgate2 <= 5"];
 action104 = _role addaction ["Raise Gates","rgate6.sqf",[],1,false,true,"","isopf and player distance opforgate1 <= 5"];
 action105 = _role addaction ["Lower Gates","lgate9.sqf",[],1,false,true,"","player distance opforgate1 <= 5"];
@@ -291,7 +291,7 @@ action124 = _role addaction ["Declare/Lift Martial Law in North Takistan", "Awes
 action125 = _role addaction ["Activate Radar", "Awesome\Functions\radar_function.sqf", [], 1, false, true, "", "(!radarActive && isOpforRanked && player distance atm5 < 20)||(!radarActive && isBluforRanked && player distance copbank < 20)"];
 //======================== Zone Commands
 opforZoneAction = _role addaction ["Cap/Neutralize Anar City", "noscript.sqf", "['opforZone',opforZoneFlag,'opforFlag'] call zone_capture;",1,false,true,"","!isciv && player distance opforZoneFlag < 5 && side player != ['opforZone'] call zone_getOwner"];
-opforZone2Action = _role addaction ["Cap/Neutralize Khushab City", "noscript.sqf", "['opforZone2',opforZone2Flag,'indepFlag'] call zone_capture;",1,false,true,"","!isciv && player distance opforZone2Flag < 5 && side player != ['opforZone2'] call zone_getOwner"];
+opforZone2Action = _role addaction ["Cap/Neutralize Khushab City", "noscript.sqf", "['opforZone2',opforZone2Flag,'opfor2Flag'] call zone_capture;",1,false,true,"","!isciv && player distance opforZone2Flag < 5 && side player != ['opforZone2'] call zone_getOwner"];
 bluforZoneAction = _role addaction ["Cap/Neutralize North Oil Fields", "noscript.sqf", "['bluforZone',bluforZoneFlag,'bluforFlag'] call zone_capture;",1,false,true,"","!isciv && player distance bluforZoneFlag < 5 && side player != ['bluforZone'] call zone_getOwner"];
 //[copbank, ["Access PMC White List", "maindialogs.sqf", ["pmc_whitelist"], 0, false, true, "", "true"]] call add_new_action;
 [player] call holster_add_actions;

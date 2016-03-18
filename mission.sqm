@@ -68180,7 +68180,7 @@ class Mission
 		class Item392
 		{
 			position[]={1532.7264,230.26013,5662.0356};
-			name="indepFlag";
+			name="opfor2Flag";
 			type="Faction_INS";
 			a=0.89999998;
 			b=0.60000002;

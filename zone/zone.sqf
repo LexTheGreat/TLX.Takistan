@@ -25,7 +25,7 @@ zone_capture = {
 	
     _curOwner = [_zone] call zone_getOwner;
 	
-    if(peacecomps && !isins && _curOwner == civilian) exitWith {
+    if(peacecomps && !isterror && _curOwner == civilian) exitWith {
         hint "Your side can only neutralize when it's not war, and not fully capture!";
     };
 	if(!([player] call player_armed)) exitWith {
@@ -62,8 +62,15 @@ zone_capture = {
 		[_zone, civilian, _zonePole, _zoneFlag] call zone_setOwner;
 		format["player commandChat '%1 has been neutralized!'; ", _zone] call broadcast;
 	};
-    [_zone, side player, _zonePole, _zoneFlag] call zone_setOwner;
-    format["player commandChat '%2 captured %1!'; ", _zone, side player] call broadcast;
+	
+	_side = side player;
+	if (isterror) then {
+		_side = resistance;
+	};
+	
+	[_zone, _side, _zonePole, _zoneFlag] call zone_setOwner;
+    format["player commandChat '%2 captured %1!'; ", _zone, _side] call broadcast;
+    
 };
 
 zone_setCapping = {
