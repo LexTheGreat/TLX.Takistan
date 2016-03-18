@@ -48235,7 +48235,7 @@ class Mission
 			vehicle="FlagPole_EP1";
 			leader=1;
 			skill=0.60000002;
-			text="indepZoneFlag";
+			text="opforZone2Flag";
 			init="this allowdamage false;";
 		};
 		class Item3974
@@ -68170,7 +68170,7 @@ class Mission
 		class Item391
 		{
 			position[]={1533.0049,230.25671,5663.165};
-			name="indepZone";
+			name="opforZone2";
 			markerType="ELLIPSE";
 			type="Empty";
 			colorName="ColorYellow";

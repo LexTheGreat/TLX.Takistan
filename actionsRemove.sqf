@@ -166,7 +166,7 @@ _role RemoveAction action_h6;
 _role RemoveAction action_h7;
 
 _role RemoveAction opforZoneAction;
-_role RemoveAction indepZoneAction;
+_role RemoveAction opforZone2Action;
 _role RemoveAction bluforZoneAction;
 
 [] call clear_new_actions;
