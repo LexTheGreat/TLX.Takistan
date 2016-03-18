@@ -3294,8 +3294,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6299.1426,66.572731,11232.124};
-					azimut=-16.938536;
+					position[]={11875.023,371.36624,2546.9512};
+					azimut=-143.2196;
 					special="NONE";
 					id=1131;
 					side="CIV";
@@ -6053,8 +6053,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9191.0059,220.37198,6259.0791};
-					azimut=-58.6371;
+					position[]={9201.3174,217.07784,6271.4341};
+					azimut=210.43376;
 					special="NONE";
 					id=669;
 					side="CIV";
@@ -7384,7 +7384,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=5590;
+		items=5599;
 		class Item0
 		{
 			position[]={5678.9585,96.308502,8893.3311};
@@ -12204,8 +12204,8 @@ class Mission
 		};
 		class Item457
 		{
-			position[]={9189.1025,220.11472,6258.6216};
-			azimut=-8.6370096;
+			position[]={9201.8125,217.09822,6269.543};
+			azimut=260.43372;
 			id=671;
 			side="EMPTY";
 			vehicle="UNBasicAmmunitionBox_EP1";
@@ -64455,10 +64455,100 @@ class Mission
 			skill=0.2;
 			init="this allowDamage False;";
 		};
+		class Item5590
+		{
+			position[]={8864.5313,265.51181,8237.0889};
+			azimut=78.418976;
+			id=5962;
+			side="EMPTY";
+			vehicle="Land_fortified_nest_small";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5591
+		{
+			position[]={8875.2637,266.34317,8238.8174};
+			azimut=-101.69232;
+			id=5963;
+			side="EMPTY";
+			vehicle="Land_fortified_nest_small";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5592
+		{
+			position[]={8865.8379,265.57901,8240.1406};
+			azimut=-10.029327;
+			id=5964;
+			side="EMPTY";
+			vehicle="Land_HBarrier5";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5593
+		{
+			position[]={8869.4873,265.87473,8245.1865};
+			azimut=80.211075;
+			id=5965;
+			side="EMPTY";
+			vehicle="Land_HBarrier5";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5594
+		{
+			position[]={8868.6729,265.93393,8250.8115};
+			azimut=80.211075;
+			id=5966;
+			side="EMPTY";
+			vehicle="Land_HBarrier5";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5595
+		{
+			position[]={8875.1729,266.0582,8223.4326};
+			azimut=6.9774299;
+			id=5967;
+			side="EMPTY";
+			vehicle="FlagCarrierNATO_EP1";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5596
+		{
+			position[]={8877.1787,266.6098,8212.5176};
+			azimut=-10.029327;
+			id=5968;
+			side="EMPTY";
+			vehicle="Land_HBarrier5";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5597
+		{
+			position[]={8873.2363,266.05225,8215.4775};
+			azimut=80.211075;
+			id=5969;
+			side="EMPTY";
+			vehicle="Land_HBarrier5";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
+		class Item5598
+		{
+			position[]={8872.4219,265.77094,8221.0996};
+			azimut=80.211075;
+			id=5970;
+			side="EMPTY";
+			vehicle="Land_HBarrier5";
+			skill=0.2;
+			init="this allowdamage false;";
+		};
 	};
 	class Markers
 	{
-		items=417;
+		items=420;
 		class Item0
 		{
 			position[]={6122.7437,83.040001,11568.63};
@@ -65144,7 +65234,7 @@ class Mission
 		};
 		class Item77
 		{
-			position[]={2128.949,215.23543,5455.3291};
+			position[]={1201.2012,309.57773,3970.3225};
 			name="lsdfield";
 			text="LSD Field";
 			type="mil_circle";
@@ -65550,7 +65640,7 @@ class Mission
 		};
 		class Item123
 		{
-			position[]={2072.1555,362.75287,353.27719};
+			position[]={2007.2307,366.06448,384.39191};
 			name="DiamondArea";
 			text="Diamond";
 			type="mil_circle";
@@ -65558,7 +65648,7 @@ class Mission
 		};
 		class Item124
 		{
-			position[]={2072.1731,362.74673,353.13461};
+			position[]={2007.2483,366.06366,384.24933};
 			name="DiamondAreaMarker";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -66007,14 +66097,14 @@ class Mission
 		};
 		class Item172
 		{
-			position[]={9190.126,220.18292,6266.6768};
+			position[]={9202.123,217.08742,6270.4639};
 			name="vipareaname";
-			text=" Smuggler";
+			text=" Smuggler (Is back from vaction)";
 			type="hd_flag";
 			colorName="ColorRed";
 			a=0.60000002;
 			b=0.60000002;
-			angle=-360.98022;
+			angle=-360.98001;
 		};
 		class Item173
 		{
@@ -66194,7 +66284,7 @@ class Mission
 		};
 		class Item191
 		{
-			position[]={501.3468,249.95319,2754.3315};
+			position[]={2.6191969,336.73856,5498.8584};
 			name="heroinfield2";
 			text="Poppy Field";
 			type="mil_circle";
@@ -66204,7 +66294,7 @@ class Mission
 		};
 		class Item192
 		{
-			position[]={500.84796,249.99695,2754.0405};
+			position[]={2.1204176,336.79855,5498.5674};
 			name="heroin_field_2";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -67315,14 +67405,14 @@ class Mission
 		};
 		class Item304
 		{
-			position[]={6298.9004,66.572853,11232.376};
+			position[]={11874.979,371.35931,2546.6069};
 			name="resourcesellmarker_2";
 			text="Resources";
 			type="mil_dot";
 			colorName="ColorBlue";
 			a=1.3;
 			b=1.3;
-			angle=-76.93853;
+			angle=-203.2196;
 		};
 		class Item305
 		{
@@ -68085,7 +68175,7 @@ class Mission
 		};
 		class Item383
 		{
-			position[]={12753.923,119.66364,10826.56};
+			position[]={12752.574,119.68737,10826.56};
 			name="safezone_1_1";
 			text="SAFE ZONE";
 			type="mil_warning";
@@ -68393,6 +68483,34 @@ class Mission
 			name="telehesnottnps";
 			type="Empty";
 			angle=-5.4010401;
+		};
+		class Item417
+		{
+			position[]={6166.5386,59.930901,11227.006};
+			name="safezone_1_1_1";
+			text="SAFE ZONE";
+			type="mil_warning";
+			colorName="ColorGreen";
+			a=0.5;
+			b=0.5;
+		};
+		class Item418
+		{
+			position[]={8896.7744,305.22067,2148.0557};
+			name="safezone_1_1_2";
+			text="SAFE ZONE";
+			type="mil_warning";
+			colorName="ColorGreen";
+			a=0.5;
+			b=0.5;
+		};
+		class Item419
+		{
+			position[]={8870.6611,265.93246,8229.6445};
+			name="Checkpoint Nixon";
+			text="Checkpoint Nixon";
+			type="mil_join";
+			angle=6.9774299;
 		};
 	};
 	class Sensors
