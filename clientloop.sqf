@@ -342,7 +342,7 @@ bases_check_teleport_marker = 3;
 bases_check_teleport_message = 4;
 
 bases_checks = [
-	["ispmc", "pmc_area_1", 20, "telehesnotpmc", "You were teleported out of the PMC base!"],
+	["isPmcSlot", "pmc_area_1", 20, "telehesnotpmc", "You were teleported out of the PMC base!"],
 	["isterror", "terror_area_1", 20, "telenotterrorciv", "You were teleported out of the terrorists' hideout!"],
 	["istnp", "tnp_area_n", 20, "telehesnottnpn", "You were teleported out of the N-TNP station!"],
 	["istnp", "tnp_area_s", 20, "telehesnottnps", "You were teleported out of the S-TNP station!"],
@@ -557,7 +557,7 @@ _supWepArray = ["Pecheneg","MG36","MG36_camo","ksvk","SVD_NSPU_EP1", "M110_NVG_E
 			} count _vipWepArray;
 		};
 	};
-	if(!ispmc) then {
+	if(!isPmcSlot) then {
 		{
 			
 			if(_x == _pWeps) then {
