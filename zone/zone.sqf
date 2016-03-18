@@ -1,4 +1,4 @@
-zones = ["opforZone", "indepZone", "bluforZone"];
+zones = ["opforZone", "opforZone2", "bluforZone"];
 if(isClient) then {
 capturing = false;
 /*if(!warstatus) then {
