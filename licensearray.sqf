@@ -45,6 +45,7 @@ INV_Licenses =
 		["drunklicense",[safelicense,safelicense,safelicense,safelicense,safelicense],"Drunk Minister License",999999999],
 		["sheplicense",[safelicense,safelicense,safelicense,safelicense,safelicense],"Shep Herder License",999999999],
 		["wolflicense",[safelicense,safelicense,safelicense,safelicense,safelicense],"Wolfgang License",999999999],
+		["heavenlicense",[safelicense,safelicense,safelicense,safelicense,safelicense],"Heaven License",999999999],
 		["highcaliberrifle",[licenseflag2,licenseflag2,licenseflag2,licenseflag2,licenseflag2],"High Caliber Rifle License",250000],
 		["newslicense",[atmnews,atmnews,atmnews,atmnews,atmnews],"News Reporters License",1500000],
 		["hitman",[safelicense,safelicense,safelicense,safelicense,safelicense],"Hitman License",500000],

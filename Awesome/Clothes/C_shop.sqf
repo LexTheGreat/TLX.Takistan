@@ -211,7 +211,7 @@ Clothes =
 ["SEC_FR4",					"FR_Sapper",					"FR Demolitions",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
 ["SEC_FR5",					"FR_AC",						"FR FAC Operator",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
 ["SEC_FR6",					"FR_AR",						"FR Heavy Gunner",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
-["SEC_FR7",					"FR_Marksman",					"FR Marksman",							west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
+["SEC_FR7",					"FR_Marksman",					"FR Marksman",							west,			"BIS",				isNato,		100000,	["heavenlicense","supporter"],			[], 	["light", "full"],		[]	],
 
 ["SEC_BAF1",				"BAF_Soldier_TL_MTP",			"BAF Team Leader",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
 ["SEC_BAF2",				"BAF_Soldier_Officer_MTP",		"BAF Officer",							west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
@@ -410,7 +410,8 @@ CSL_UN_1 =
 "CZ_NORD",
 "CZ_SHEP",
 "CZ_WOLF",
-"CZ_SOLID"
+"CZ_SOLID",
+"SEC_FR7"
 ];
 
 CSL_OPF_1 = 

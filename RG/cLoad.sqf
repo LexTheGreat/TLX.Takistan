@@ -290,6 +290,9 @@ wolflicense = [
 	"76561198094294502",
 	"76561198154237291"
 ];
+heavenlicense = [
+	"76561198119216004"
+];
 
 // ------------
 
@@ -346,6 +349,11 @@ if((getPlayerUID player) in sheplicense) then {
 if((getPlayerUID player) in wolflicense) then {
 	INV_LicenseOwner = INV_LicenseOwner + ["wolflicense"];
 	server globalchat "Wolfgang License Added";
+};
+
+if((getPlayerUID player) in heavenlicense) then {
+	INV_LicenseOwner = INV_LicenseOwner + ["heavenlicense"];
+	server globalchat "Heaven License Added";
 };
 
 if (isdog) then {
