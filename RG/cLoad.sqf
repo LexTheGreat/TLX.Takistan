@@ -130,20 +130,38 @@ switch (playerSide) do
 				[player, _uid, "BackMagPlayerTnp", "ARRAY"] call sendToServer;
 			};
 		} else {
-			[player, _uid, "moneyAccountCiv", "NUMBER"] call sendToServer;
-			[player, _uid, "MagazinesPlayerCiv", "ARRAY"] call sendToServer;
-			[player, _uid, "WeaponsPlayerCiv", "ARRAY"] call sendToServer;
-			[player, _uid, "LicensesCiv", "ARRAY"] call sendToServer;
-			[player, _uid, "InventoryCiv", "ARRAY"] call sendToServer;
-			[player, _uid, "privateStorageCiv", "ARRAY"] call sendToServer;
-			[player, _uid, "FactoryCiv", "ARRAY"] call sendToServer;
-			[player, _uid, "positionPlayerCiv", "ARRAY"] call sendToServer;
-			[player, _uid, "BackpackPlayerCiv", "STRING"] call sendToServer;
-			[] spawn { 
-				sleep 5;
-				_uid = getPlayerUID player;
-				[player, _uid, "BackWepPlayerCiv", "ARRAY"] call sendToServer;
-				[player, _uid, "BackMagPlayerCiv", "ARRAY"] call sendToServer;
+			if (isPmcSlot) then {
+				[player, _uid, "moneyAccountPmc", "NUMBER"] call sendToServer;
+				[player, _uid, "MagazinesPlayerPmc", "ARRAY"] call sendToServer;
+				[player, _uid, "WeaponsPlayerPmc", "ARRAY"] call sendToServer;
+				[player, _uid, "LicensesPmc", "ARRAY"] call sendToServer;
+				[player, _uid, "InventoryPmc", "ARRAY"] call sendToServer;
+				[player, _uid, "privateStoragePmc", "ARRAY"] call sendToServer;
+				[player, _uid, "FactoryPmc", "ARRAY"] call sendToServer;
+				[player, _uid, "positionPlayerPmc", "ARRAY"] call sendToServer;
+				[player, _uid, "BackpackPlayerPmc", "STRING"] call sendToServer;
+				[] spawn { 
+					sleep 5;
+					_uid = getPlayerUID player;
+					[player, _uid, "BackWepPlayerPmc", "ARRAY"] call sendToServer;
+					[player, _uid, "BackMagPlayerPmc", "ARRAY"] call sendToServer;
+				};
+			} else {
+				[player, _uid, "moneyAccountCiv", "NUMBER"] call sendToServer;
+				[player, _uid, "MagazinesPlayerCiv", "ARRAY"] call sendToServer;
+				[player, _uid, "WeaponsPlayerCiv", "ARRAY"] call sendToServer;
+				[player, _uid, "LicensesCiv", "ARRAY"] call sendToServer;
+				[player, _uid, "InventoryCiv", "ARRAY"] call sendToServer;
+				[player, _uid, "privateStorageCiv", "ARRAY"] call sendToServer;
+				[player, _uid, "FactoryCiv", "ARRAY"] call sendToServer;
+				[player, _uid, "positionPlayerCiv", "ARRAY"] call sendToServer;
+				[player, _uid, "BackpackPlayerCiv", "STRING"] call sendToServer;
+				[] spawn { 
+					sleep 5;
+					_uid = getPlayerUID player;
+					[player, _uid, "BackWepPlayerCiv", "ARRAY"] call sendToServer;
+					[player, _uid, "BackMagPlayerCiv", "ARRAY"] call sendToServer;
+				};
 			};
 		};
 	};
