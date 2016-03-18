@@ -756,9 +756,10 @@ interact_mobile_send = {
 	
 	[_player, 'money', -(_cost)] call INV_AddInventoryItem;
 	
+	/* Everyone has a mobile by default?.. This check is broken for now.
 	if (not([_target, "mobile"] call player_get_bool)) exitWith {
 		player groupChat format["%1-%2 does not have a mobile phone, your text message bounced", _target, (name _target)];
-	};
+	};*/
 
 	player groupChat format["You sent a text message to %1-%2 for $%3", _target, (name _target), strM(_cost)];
 	
