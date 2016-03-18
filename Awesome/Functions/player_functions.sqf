@@ -1047,7 +1047,7 @@ player_near_tnp_count = {
 	if (typeName _distance != "SCALAR") exitWith {0};
 
 	private["_near_players"];
-	_near_players = [];
+	_near_players = 0;
 	{
 		private["_cplayer", "_cside"];
 		_cplayer = _x;
@@ -1055,7 +1055,7 @@ player_near_tnp_count = {
 		if (([_cplayer] call player_human)) then {
 			if (not(_cplayer == _player)) then {
 				if ([_cplayer] call player_tnp) then {
-					_near_players = _near_players + [_cplayer];
+					_near_players = _near_players + 1;
 				};
 			};
 		};
