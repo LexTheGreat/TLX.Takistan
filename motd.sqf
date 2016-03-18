@@ -4,7 +4,7 @@ custom_motd = nil;
 while {true} do {
 	{server globalChat format["[MoTD] %1", _x]} forEach [
 			"Report Any Bugs on our GitHub @LexTheGreat/TLX.Takistan/issues",
-			"Visit our website at http://tlx-gaming.enjin.com Also check out the rules page!"
+			"Visit our website at http://tlx-gaming.enjin.com Also check out the rules page!",
 			"All Blufor, Opfor, TNP and Terrorists are required to be on Teamspeak!"
 		];
 	

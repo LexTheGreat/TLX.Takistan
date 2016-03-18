@@ -1,11 +1,11 @@
 private ["_radObjects","_artyObjects", "_radPos", "_mapMarking"];
 liafu = true;
 radarActive = true;
-if (rolenumber == 74) then {
+if (isOpforRanked) then {
 	_radPos = getMarkerPos "opf_radar_site";
 }
 else {
-	if (rolenumber == 92) then {
+	if (isBluforRanked) then {
 		_radPos = getMarkerPos "blu_radar_site";
 	}
 	else {
