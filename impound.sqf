@@ -72,7 +72,7 @@ if(_art == "buy")then {
 		player groupchat "You do not have enough money"
 	};
 
-	if(iscop and count (nearestobjects [getpos ccarspawn,["Ship","car","motorcycle","truck"], 3]) > 0)exitwith{player groupchat "There is a vehicle blocking the spawn! Call a cop to have it impounded."};
+	if(isGov and count (nearestobjects [getpos ccarspawn,["Ship","car","motorcycle","truck"], 3]) > 0)exitwith{player groupchat "There is a vehicle blocking the spawn! Call a cop to have it impounded."};
 
 	[player, "money", -impoundpay] call INV_AddInventoryItem;
 

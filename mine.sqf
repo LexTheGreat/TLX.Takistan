@@ -15,7 +15,7 @@ working = true;
 _isInArea = false;
 
 {
-	if (player distance (getMarkerPos ((_x select 0) select 0)) < ((_x select 0) select 1) && not(iscop)) then {
+	if (player distance (getMarkerPos ((_x select 0) select 0)) < ((_x select 0) select 1) && not(isNato)) then {
 		_isInArea = true; 
 		_minearray = _x
 	};

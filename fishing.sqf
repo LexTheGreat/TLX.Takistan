@@ -4,7 +4,7 @@ private ["_fishingarray"];
 
 _art = _this select 0;
 
-if(iscop or isopf)exitwith{};
+if(isGov)exitwith{};
 
 if (_art == "use") then {
 	if(working) exitwith {};

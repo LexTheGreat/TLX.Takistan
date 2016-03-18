@@ -43,7 +43,7 @@ while {true} do {
 		_added  = (_Arr1 select _i);
 		_isInArea = false;
 		
-		if((iscop or isopf) and ((_arr select 1) == "Whale" or (_arr select 1) == "Unprocessed_cocain")) exitWith {}; 
+		if((isGov) and ((_arr select 1) == "Whale" or (_arr select 1) == "Unprocessed_cocain")) exitWith {}; 
 		
 		{
 			if (((vehicle player) distance (getMarkerPos (_x select 0))) < (_x select 1)) then {_isInArea = true;};

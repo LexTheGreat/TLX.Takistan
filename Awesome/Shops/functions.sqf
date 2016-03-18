@@ -648,7 +648,7 @@ shop_buy_item_validate_data = {
 		[format["This item requires %1 %3", (_license_3 call INV_GetLicenseName)], _quiet, _license_3] call shop_set_status_message; nil
 	};
 	
-	if (_needsLicense && (iscop || istnp) && !isopf && !(_license_2 call INV_HasLicense)) exitWith {
+	if (_needsLicense && (isNgov) && !isopf && !(_license_2 call INV_HasLicense)) exitWith {
 		[format["This item requires %1", (_license_2 call INV_GetLicenseName)], _quiet] call shop_set_status_message; nil
 	};
 	
@@ -656,7 +656,7 @@ shop_buy_item_validate_data = {
 		[format["This item requires %1", (_license_1 call INV_GetLicenseName)], _quiet] call shop_set_status_message; nil
 	};
 	
-	if (_isIllegal && (iscop or isopf) ) exitWith {
+	if (_isIllegal && (isGov) ) exitWith {
 		["The selected item is illegal, you are not allowed to buy it", _quiet]  call shop_set_status_message; nil
 	};
 	
@@ -899,7 +899,7 @@ shop_sell_item_validate_data = {
 		["You are trying to sell more than the current demand for this item", _quiet] call shop_set_status_message; nil
 	};
 	
-	if (_isIllegal && (iscop or isopf)) exitWith {
+	if (_isIllegal && (isGov)) exitWith {
 		 ["The selected item is illegal, you are not allowed to sell it", _quiet]  call shop_set_status_message; nil
 	};
     

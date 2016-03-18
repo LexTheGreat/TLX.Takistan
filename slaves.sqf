@@ -95,7 +95,7 @@ if (_art == "slave") exitWith {
 				_a1 = 1;
 			};
 
-			if (not(iscop or isopf) and ((vehicle _slavename) DISTANCE copbase1 <= 250) and (alive _slavename)) then {
+			if (not(isGov) and ((vehicle _slavename) DISTANCE copbase1 <= 250) and (alive _slavename)) then {
 				player groupChat localize "STRS_arbeiter_in_copbase";
 				if (not((vehicle _slavename) == _slavename)) then {
 					_slavename action ["eject", (vehicle _slavename)];

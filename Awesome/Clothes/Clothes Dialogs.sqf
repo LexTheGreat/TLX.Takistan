@@ -14,7 +14,7 @@ C_List = [];
 C_tstorage = [];
 
 if (isciv) then { C_tstorage = C_storage_civ; };
-if (iscop) then { C_tstorage = C_storage_west; };
+if (isNato) then { C_tstorage = C_storage_west; };
 if (isopf) then { C_tstorage = C_storage_east; };
 if (isins) then { C_tstorage = C_storage_guer; };
 

@@ -2216,7 +2216,6 @@ player_init_arrays = {
 	//player groupChat["role = %1, rolestring = %2,  rolenumber = %3", role, rolestring, rolenumber];
 
 	isNato = [_player] call player_blufor;
-	iscop = isNato; // Deprecated support, move on lex!
 	isciv = [_player] call player_civilian;
 	isopf = [_player] call player_opfor;
 	istnp = [_player] call player_tnp;
@@ -2578,7 +2577,7 @@ player_reset_prison = {
 	_player = _this select 0;
 	if (not([_player] call player_human)) exitWith {};
 
-	if (([_player, "restrained"] call player_get_bool) && not(iscop or isopf)) then {
+	if (([_player, "restrained"] call player_get_bool) && not(isGov)) then {
 		private["_message"];
 		_message = format["%1-%2 aborted while restrained, he has been sent to prison", _player, (name _player)];
 		format['server globalChat toString(%1);', toArray(_message)] call broadcast;
@@ -2587,7 +2586,7 @@ player_reset_prison = {
 		[_player, 100] call player_prison_bail;
 		[_player] call player_prison_convict;
 	}
-	else { if (([_player] call player_get_arrest) && not(iscop or isopf))then {
+	else { if (([_player] call player_get_arrest) && not(isGov))then {
 		private["_message"];
 		_message = format["%1-%2 has been sent to prison to complete his previous sentence", _player, (name _player)];
 		format['server globalChat toString(%1);', toArray(_message)] call broadcast;
@@ -2841,7 +2840,7 @@ player_init_stats = {
 	[_player, "restrained", false] call player_set_bool;
 	[_player, "extradeadtime", 0] call player_set_scalar;
 
-	if (iscop or isopf) then {
+	if (isNato && isopf) then {
 		[_player, "sidemarkers", true] call player_set_bool;
 	};
 

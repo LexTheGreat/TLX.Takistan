@@ -300,10 +300,10 @@ interact_pay_bail = {
 	player groupChat format ["You paid $%1 in bail", strM(_bail)];
 	private["_message"];
 	_message = format["Prisoner %1-%2 paid $%3 in bail", _player, (name _player), strM(_bail)];
-	format['if(not(iscop)) then {server globalChat toString(%1);};', toArray(_message)] call broadcast;
+	format['if(not(isGov)) then {server globalChat toString(%1);};', toArray(_message)] call broadcast;
 		
 	_message = format["You got $%1 because prisoner %2-%3 paid %4 in bail", _cop_bail, _player, (name _player), strM(_bail)];
-	format['if (iscop) then {server globalChat toString(%1);};', toArray(_message)] call broadcast;
+	format['if (isNato) then {server globalChat toString(%1);};', toArray(_message)] call broadcast;
 };
 
 interact_toggle_restrains = {
@@ -1490,7 +1490,7 @@ interact_ticket_distribute = {
 	if (not([_target] call player_human)) exitWith {};
 	if (_amount <= 0) exitWith {};
 	
-	if (not(iscop)) exitWith {
+	if (not(isNato)) exitWith {
 		_message = format["%1-%2 paid %3-%4's ticket of $%5", _target, (name _target), _player, (name _player), strM(_amount)];
 		server globalChat _message;
 	};

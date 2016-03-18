@@ -1,4 +1,4 @@
-if(iscop or isopf)exitwith{player groupchat "only civilians can do this!"};
+if(isGov)exitwith{player groupchat "only civilians can do this!"};
 
 _this 	 = _this select 3;
 _item1	 = _this select 0;

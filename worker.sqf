@@ -24,7 +24,7 @@ if (_art == "holen") exitWith {
 
 	call compile format ['"%3" createUnit [getpos player, group player, "%1hure%2 = this;this setVehicleVarName ""%1hure%2"";this addEventHandler [""killed"", {[(_this select 1), %1] execVM ""workerkilled.sqf"";}];"];', rolestring, _hoenumber, _civ];
 	processInitCommands; liafu = true;
-	(format ["if (iscop or isopf) then {%2hure%3 addaction [localize ""STRS_arbeiter_copaction"", ""noscript.sqf"", [""player groupChat format[localize """"STRS_arbeiter_meister"""", %2];""]];};if (local server) then {publicarbeiterarctionarray = publicarbeiterarctionarray + [ [%2hure%3, %4] ];};", _hoename, rolestring, _hoenumber, player]) call broadcast;
+	(format ["if (isGov) then {%2hure%3 addaction [localize ""STRS_arbeiter_copaction"", ""noscript.sqf"", [""player groupChat format[localize """"STRS_arbeiter_meister"""", %2];""]];};if (local server) then {publicarbeiterarctionarray = publicarbeiterarctionarray + [ [%2hure%3, %4] ];};", _hoename, rolestring, _hoenumber, player]) call broadcast;
 
 	_hoename = call compile format['%1hure%2', rolestring, _hoenumber];
 

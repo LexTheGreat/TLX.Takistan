@@ -165,7 +165,7 @@ if(_art == "clientloop") then {
 		};
 	};
 
-	while {iscop} do {
+	while {isNato} do {
 		for "_c" from 0 to (count squadarray - 1) do {
 			_squadarray = squadarray select _c;
 			_squad	   = _squadarray select 0;

@@ -43,7 +43,7 @@ if (_art == "use") then {
 		[player, _vehicle] call vehicle_add;
 		player groupChat localize "STRS_inventar_lockpick_success";		
 		
-		if ((_near_cops || _near_civilians || _incarpark) && not(iscop or isopf)) then {
+		if ((_near_cops || _near_civilians || _incarpark) && not(isGov)) then {
 			private["_message"];
 			_message =  format["%1 was seen stealing a vehicle (registration plate: %2)!", player, _vehicle];
 			format['hint (toString(%1));', toArray(_message)] call broadcast;
@@ -53,7 +53,7 @@ if (_art == "use") then {
 	else {																																						
 		player groupChat localize "STRS_inventar_lockpick_noluck";
 		
-		if ((_near_cops || _near_civilians || _incarpark) && not(iscop or isopf)) then { 
+		if ((_near_cops || _near_civilians || _incarpark) && not(isGov)) then { 
 			[player, "attempted vehicle theft", 2000, 25, false] call player_update_warrants;
 			private["_message"];
 			_message = format["%1 was seen attempting to lockpick a vehicle (Registration plate: %2)", player, _vehicle];

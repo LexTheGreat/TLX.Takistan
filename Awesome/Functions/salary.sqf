@@ -4,7 +4,7 @@ if (not(isNil "salary_functions_defined")) exitWith {};
 
 
 cop_salary_handout = {
-	if (not(iscop)) exitWith {};
+	if (not(isNgov)) exitWith {};
 
 	private["_income"];
 	_income = add_copmoney;
@@ -29,7 +29,7 @@ cop_salary_handout = {
 		_income = _income + chiefExtraPay;
 	};
 	
-	if(iscop) then {
+	if(isNato) then {
 		_bluZone = ['bluforZone'] call zone_getOwner;
 		if (_bluZone == resistance || _bluZone == east) then {
 			_income = _income*(0.2);
@@ -56,7 +56,7 @@ cop_salary_handout = {
 
 
 civilian_salary_handout = {
-	if (iscop) exitWith {};
+	if (isNato) exitWith {};
 	if ([player] call player_get_dead) exitWith {
 		player groupChat format[localize "STRS_moneh_paycheckdead"];
 	};
@@ -195,7 +195,7 @@ civilian_salary_handout = {
 			
 			// Disabled for bonus
 			/*if(!isciv) then {
-				if(iscop) then {
+				if(isNato) then {
 					_bluZone = ['bluforZone'] call zone_getOwner;
 					if (_bluZone == resistance || _bluZone == east) then {
 						_income = _income*(0.5);
@@ -226,17 +226,17 @@ civilian_salary_handout = {
     };
 
 cop_salary_loop = {
-	if (not(iscop)) exitWith {};
+	if (not(isNato)) exitWith {};
 
 	private["_i", "_salary_delay"];
 	_salary_delay =  5;
 	_i = _salary_delay;
-	while { _i > 0 && iscop } do {
+	while { _i > 0 && isNato } do {
 		player groupChat format[localize "STRS_moneh_countdown", _i];
 		[60] call isleep;
 		_i = _i - 1;
 	};
-	if (not(iscop)) exitWith {};
+	if (not(isNato)) exitWith {};
 	[] spawn cop_salary_handout;
 	[] spawn supporter_salary_handout;
 	[1] call isleep;
@@ -245,17 +245,17 @@ cop_salary_loop = {
 };
 
 civilian_salary_loop = {
-	if (iscop) exitWith {};
+	if (isNato) exitWith {};
 
 	private["_i", "_salary_delay"];
 	_salary_delay = 5;
 	_i = _salary_delay;
-	while { _i > 0 && not(iscop) } do {
+	while { _i > 0 && not(isNato) } do {
 		player groupChat format[localize "STRS_moneh_countdown", _i];
 		[59] call isleep;
 		_i = _i - 1;
 	};
-	if (iscop) exitWith {};
+	if (isNato) exitWith {};
 	
 	[] spawn civilian_salary_handout;
     [] spawn supporter_salary_handout;

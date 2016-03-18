@@ -210,7 +210,7 @@ check_inventory = {
 };
 
 cop_stun_gun_modify = {
-	if (!(iscop or isopf)) exitWith {};
+	if (!(isGov)) exitWith {};
 	//if (isNil "weaponsloaded") exitWith {};
 	//if (not(weaponsloaded)) exitWith {};
 	if((player ammo (currentWeapon player)) <= stunshotsmax) exitWith {};
@@ -278,7 +278,7 @@ check_actions = {
 
 
 check_factory_actions = {
-	if (iscop or isopf) exitwith{};
+	if (isGov) exitwith{};
 	private["_player"];
 	_player = player;
 	private["_vehicle", "_in_vehicle"];
@@ -347,7 +347,7 @@ bases_checks = [
 	["istnp", "tnp_area_n", 20, "telehesnottnpn", "You were teleported out of the N-TNP station!"],
 	["istnp", "tnp_area_s", 20, "telehesnottnps", "You were teleported out of the S-TNP station!"],
 	["isopf", "opfor_area_1", 20, "telehesnottla", "You were teleported out of the TLA base!"],
-	["iscop", "blufor_area_1", 20, "telehesnotcop", "You were teleported out of the Blufor base!"]
+	["isNato", "blufor_area_1", 20, "telehesnotcop", "You were teleported out of the Blufor base!"]
 ];
 
 check_bases = {
@@ -489,7 +489,7 @@ check_droppable_items = {
 };
 
 check_restrains = {
-	if (iscop or isopf) exitWith {};
+	if (isGov) exitWith {};
 	if (not(alive player)) exitWith {};
 	
 	private["_physicallyRestrained", "_logicallyRestrained"];

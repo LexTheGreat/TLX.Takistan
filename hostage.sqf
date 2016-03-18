@@ -18,7 +18,7 @@ if (_art == "serverloop") then {
 
 				workplacejob_hostage_serverarray set [_i,""];
 				workplacejob_hostage_serverarray = workplacejob_hostage_serverarray - [""];
-				"if(iscop)then{player sidechat ""The threat to the hostage has been removed""}" call broadcast;
+				"if(isNgov)then{player sidechat ""The threat to the hostage has been removed""}" call broadcast;
 				//[diag_tickTime - _t1, "HOSTAGE LOOP"] call fnc_fps_hi_log;
 				sleep ((workplacejob_hostage_break)*60);
 				workplacejob_hostage_active = false;
@@ -69,7 +69,7 @@ if (_art == "getajob_hostage") then {
 
 	player groupChat "The Hostage is marked on the map, don't let the police get you.";
 
-	"if (iscop) then {player sideChat ""Someone is trying to take a hostage. The hostage has been marked on the map. Arrest the hostage taker before its too late!""};" call broadcast;
+	"if (isNgov) then {player sideChat ""Someone is trying to take a hostage. The hostage has been marked on the map. Arrest the hostage taker before its too late!""};" call broadcast;
 
 	player groupchat "The police are on to you, hurry up!";
 	[player, "Assassin", 200000] call player_update_warrants;
@@ -102,7 +102,7 @@ if (_art == "getajob_hostage") then {
 			server globalchat ""The Hostage taker has fled the area! Cops get $20000"";
 			_copplayernumber = playersNumber west;
 			_copbonus = 20000;
-			if (iscop) then {[player, _copbonus] call transaction_bank; player sidechat format[""you received $%1 for hostage taker fleeing the area"", _copbonus];};
+			if (isNgov) then {[player, _copbonus] call transaction_bank; player sidechat format[""you received $%1 for hostage taker fleeing the area"", _copbonus];};
 			" call broadcast;
 			sleep 2;
 			player groupchat "You fled the area with the hostage, stay in the zone next time, mission failed!";
@@ -117,7 +117,7 @@ if (_art == "getajob_hostage") then {
 			server globalchat ""The Hostage taker has lost!"";
 			_copplayernumber = playersNumber west;
 			_copbonus = 5000;
-			if (iscop) then {[player, _copbonus] call transaction_bank; player sidechat format[""you received $%1 for the successful rescue of the hostage"", _copbonus];};
+			if (isNgov) then {[player, _copbonus] call transaction_bank; player sidechat format[""you received $%1 for the successful rescue of the hostage"", _copbonus];};
 			" call broadcast;
 			sleep 2;
 			player groupchat "The Hostage was rescued, mission failed!";
