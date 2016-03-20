@@ -45,6 +45,7 @@ A_LIST_ADMINS	=
 	"76561198134796571", // Canadian Bacon
 	"76561198053580599", //Martin
 	"76561198134919635",  // lordwookie
+	"76561198101119702", //Tone
 	"76561198142625756" // Jaysec
 ];
 
@@ -54,9 +55,8 @@ A_LIST_ADMINS	=
 
 A_LIST_MODS	=
 [
-	"76561198092203299", //Stoned Turtle
 	"76561198095702747", //Irish
-	"76561198101119702", //Tone
+	"76561198211441867", //Kevlar
 	"76561198092131123"  //JacksonS
 ];
 
@@ -72,67 +72,32 @@ isStaff = (isAdminDev || isSnAdmin || isAdmin || isMod || isDeveloper);
 
 // Remember the Array format! No comma on last item in array!
 
-// Whitelisting
-pmcwhitelist = [
-"169460806", //TLXGOD
-"245049094", // Fyodor
-"251317574", //KillerKris
-"254861574" //KillaCali3
-];
-
-
-//if (!(_uid in isStaff) && (call player_cop;) && (    )) then {call kick_whitelist};
-
-
-// Remember the Array format! No comma on last item in array!
-
-// Blacklisting
-if(isNil "copblacklist") then {
-	copblacklist = [
-	"76561198040462947", //Son of the Bitch
-	"76561198095037617", //Goldenpotaters
-	"76561198150297021"//Envy
+// Blacklisting/Whitelisting
+if(isNil "bluforWhiteList") then {
+	bluforWhiteList = [
+		""
 	];
 };
-if(isNil "opfblacklist") then {
-	opfblacklist = [
-		"76561198040462947" //Son of the Bitch
+
+if(isNil "opforBlackList") then {
+	opforBlackList = [
+		""
 	];
 };
-if(isNil "opfcmdblacklist") then {
-	opfcmdblacklist = [
-	
-	];
-};
-if(isNil "insblacklist") then {
-	insblacklist = [
-	
-	];
-};
-pmcblacklist = [
-"76561198203570236", //Austin
-"76561198177166307", //Dark Arrow
-"76561198083392018" //jpf
-];
 
 issup = ((_uid in supporters1) || (_uid in supporters2) || (_uid in supporters3) || (_uid in supporters4) || (_uid in supportersVIP));
 isvip = ((_uid in supportersVIP));
 ispmc = ((_uid in pmcwhitelist) or (isStaff) or (issup));
 
 _side = playerSide;
-if((_uid in copblacklist) && (_side == west)) then {
-	player groupChat "You are Blacklisted from Blufor!";
+if(not(_uid in bluforWhiteList) && (_side == west)) then {
+	player groupChat "You are not WhiteListed for Nato!";
 	sleep 7;
 	failMission "END1";
 };
 
-if((_uid in opfblacklist) && (_side == east)) then {
-	player groupChat "You are Blacklisted from Opfor!";
-	sleep 7;
-	failMission "END1";};
-
-if((_uid in insblacklist) && (_side == resistance)) then {
-	player groupChat "You are Blacklisted from Insurgent!";
+if((_uid in opforBlackList) && (_side == east)) then {
+	player groupChat "You are BlackListed from Opfor!";
 	sleep 7;
 	failMission "END1";
 };

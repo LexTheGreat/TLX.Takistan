@@ -138,16 +138,14 @@ _array = [];
 			["---------------------------------", {}],
 			["****** Blacklist Commands ******",	{}],
 
-			["Blacklist player from Cop&Opfor", {
+			["Blacklist player Opfor", {
 			if(!AdminSpamBroadcasting) then {
 				AdminSpamBroadcasting = true;
 				private["_killer_uid"];
 				_killer_uid = getPlayerUID _selectedplayer;
 				["ADMIN LOGGER", name (_selectedplayer), "was temp blacklisted by", str (name player)] call fn_LogToServer;
-				copblacklist set [count copblacklist, _killer_uid];
-				opfblacklist set [count opfblacklist, _killer_uid];
-				publicVariable "copblacklist";
-				publicVariable "opfblacklist";
+				opforBlackList set [count opforBlackList, _killer_uid];
+				publicVariable "opforBlackList";
 				format['
 				[] spawn
 						{
@@ -166,16 +164,14 @@ _array = [];
 
             }],
 
-			["Un-Blacklist Player from Cop&Opfor [uid only]", {
+			["Un-Blacklist Player [uid only]", {
                 if(!AdminSpamBroadcasting) then {
                     AdminSpamBroadcasting = true;
                     private["_killer_uid"];
                     _killer_uid = _inputText;
                 	["ADMIN LOGGER", _inputText, "(uid) was un blacklisted by", str (name player)] call fn_LogToServer;
-					copblacklist = copblacklist - [_killer_uid];
-					opfblacklist = opfblacklist - [_killer_uid];
-					publicVariable "copblacklist";
-					publicVariable "opfblacklist";
+					opforBlackList = opforBlackList - [_killer_uid];
+					publicVariable "opforBlackList";
                     hint format["Player (UID: %1) was removed from the blacklist.", _inputText];
                     sleep 5;
 					AdminSpamBroadcasting = false;
