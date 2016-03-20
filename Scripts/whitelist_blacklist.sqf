@@ -75,7 +75,32 @@ isStaff = (isAdminDev || isSnAdmin || isAdmin || isMod || isDeveloper);
 // Blacklisting/Whitelisting
 if(isNil "bluforWhiteList") then {
 	bluforWhiteList = [
-		""
+		"76561198094294502", // Unknown
+		"76561198101924418", // Lex_the_great
+		"76561198154237291", // SGT E. Garcia
+		"76561198124176578", // 1st Lt Monkey
+		"76561198119216004", // Heaven
+		"76561198134796571", // Canadian Bacon
+		"76561198053580599", //Martin
+		"76561198134919635", // lordwookie
+		"76561198101119702", //Tone
+		"76561198142625756", // Jaysec
+		"76561198095702747", //Irish
+		"76561198211441867", //Kevlar
+		"76561198092131123", //JacksonS
+		"76561198085630212", //Barkuz
+		"76561198065161712", //Strideynet
+		"76561198068079024", //Solid Snake
+		"76561198087246280", //Franka
+		"76561198044511240", //Comrade
+		"76561198165263960", //Bryce
+		"76561198119668286", //Zander
+		"76561198274052048", //ProXum
+		"76561198071078533", //Rogue
+		"76561198110469807", //Kage
+		"76561198119163382", //Chris Kyle
+		"76561198146926838", //WakeUpEatPlaySleep
+		"76561198211441867" //Kevlar
 	];
 };
 
