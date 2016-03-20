@@ -136,6 +136,7 @@ Clothes =
 ["CZ_SOLID",				"FR_Ohara",						"Solid Snake",						    west, 			"BIS",			isNato,		500000,		["mgslicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_BOONIE",				"FR_AC",						"Jarhead",						    west, 			"BIS",			isNato,		500000,		["jarlicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_BONG",					"GER_Soldier_MG_EP1",			"Bong Lord",						    west, 			"BIS",			isNato,		500000,		["bonglicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
+["CZ_DALTON",				"US_Delta_Force_Undercover_Takistani06_EP1",			"Undercover Dalton",						    west, 			"BIS",			!isNato,		500000,		["daltonlicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_COLE",					"US_Delta_Force_Undercover_Takistani06_EP1",			"The Original Bond",						    west, 			"BIS",			isNato,		500000,		["colelicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_RECK",					"GER_Soldier_TL_EP1",			"The Recker",						    west, 			"BIS",			isNato,		500000,		["recklicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
 ["CZ_NORD",					"GER_Soldier_Scout_EP1",			"Martin the Nord",						    west, 			"BIS",			isNato,		500000,		["nordlicense"],		[],		["light", "full"],		[0,1,2,3,4,5]	],
@@ -211,7 +212,7 @@ Clothes =
 ["SEC_FR4",					"FR_Sapper",					"FR Demolitions",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
 ["SEC_FR5",					"FR_AC",						"FR FAC Operator",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
 ["SEC_FR6",					"FR_AR",						"FR Heavy Gunner",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
-["SEC_FR7",					"FR_Marksman",					"FR Marksman",							west,			"BIS",				isNato,		100000,	["heavenlicense","supporter"],			[], 	["light", "full"],		[]	],
+["SEC_FR7",					"FR_Marksman",					"FR Marksman",							west,			"BIS",				isNato,		100000,	["heavenlicense"],			[], 	["light", "full"],		[]	],
 
 ["SEC_BAF1",				"BAF_Soldier_TL_MTP",			"BAF Team Leader",						west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
 ["SEC_BAF2",				"BAF_Soldier_Officer_MTP",		"BAF Officer",							west,			"BIS",				isNato,		100000,	["supporter"],			[], 	["light", "full"],		[]	],
@@ -260,7 +261,8 @@ CSL_PMC_1 =
 "PMC_BONG",
 "PMC_GRELL",
 "PMC_KARMA",
-"SEC_SOLID"
+"SEC_SOLID",
+"CZ_DALTON"
 ];
 
 CSL_TER_1 =
@@ -289,7 +291,8 @@ CSL_TER_1 =
 "TER_CH_MED",
 "TER_CH_SAB",
 "TER_CH_SCOUT",
-"TER_CH_SNIPER"
+"TER_CH_SNIPER",
+"CZ_DALTON"
 ];
 
 CSL_CIV_1 = 
@@ -346,7 +349,8 @@ CSL_CIV_1 =
 "CIV_TK_WOM2",
 "CIV_TK_WOM3",
 "CIV_WOLF",
-"CIV_CH_DOC"
+"CIV_CH_DOC",
+"CZ_DALTON"
 ];
 
 CSL_CIV_2 = 
@@ -382,7 +386,8 @@ CSL_CIV_2 =
 "CIV_CH_WOK3",	
 "CIV_CH_WOK4",
 "CIV_WOLF",
-"CIV_CH_DOC"
+"CIV_CH_DOC",
+"CZ_DALTON"
 ];
 
 CSL_UN_1 =
@@ -440,7 +445,8 @@ CSL_OPF_1 =
 "OPF_RU_SO",
 "OPF_DRUNK",
 "OPF_WOLF",
-"OPF_INS_SAB"
+"OPF_INS_SAB",
+"CZ_DALTON"
 ];
 
 CSL_SECRET_KSK =
