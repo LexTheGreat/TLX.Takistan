@@ -1435,18 +1435,26 @@ player_get_gear = {
 	_gear
 };
 
+// Basic Stun Gear, M9 + Ammo
+GovStunGear_Mags = ["15Rnd_9x19_M9SD","15Rnd_9x19_M9SD","15Rnd_9x19_M9SD","15Rnd_9x19_M9SD"];
+GovStunGear_Weap  = ["ItemGPS","M9", "Binocular", "NVGoggles"];
 
-CopStartGear_Mags =
-[
-    "15Rnd_9x19_M9SD",
-	"15Rnd_9x19_M9SD",
-	"15Rnd_9x19_M9SD",
-	"15Rnd_9x19_M9SD"
+TNPGear_Weap = GovStunGear_Weap + [
+	"M1014"
+]; TNPGear_Mags = GovStunGear_Mags + [
+	"Rnd_B_Beneli_74Slug", "Rnd_B_Beneli_74Slug", "Rnd_B_Beneli_74Slug"
 ];
 
-CopStartGear_Weap  = [
-"ItemGPS",
-"M9"
+BluforGear_Weap = GovStunGear_Weap + [
+	"M4A1"
+]; BluforGear_Mags = GovStunGear_Mags + [
+	"Rnd_20_Stanag", "Rnd_20_Stanag", "Rnd_20_Stanag"
+];
+
+OpforGear_Weap = GovStunGear_Weap + [
+	"FN_FAL"
+]; OpforGear_Mags = GovStunGear_Mags + [
+	"Rnd_762x51_FNFAL", "Rnd_762x51_FNFAL", "Rnd_762x51_FNFAL"
 ];
 
 player_set_gear = {
@@ -1484,6 +1492,24 @@ player_set_gear = {
 		_magazines = CopStartGear_Mags;
 		_weapons = CopStartGear_Weap;
 	};
+	
+	if ((count _weapons) == 0 && (count _magazines) == 0) then {
+		if ([_player] call player_blufor) then {
+			_magazines = BluforGear_Mags;
+			_weapons = BluforGear_Weap;
+		} else {
+			if ([_player] call player_opfor) then {
+				_magazines = OpforGear_Mags;
+				_weapons = OpforGear_Weap;	
+			} else {
+				if ([_player] call player_tnp)) then {
+					_magazines = TNPGear_Mags;
+					_weapons = TNPGear_Weap;	
+				};
+			};
+		};
+	};
+	
 
 	{_player addMagazine _x} forEach _magazines;
 	{_player addWeapon _x} forEach _weapons;
@@ -2647,7 +2673,7 @@ player_spawn = { _this spawn {
 		[_player] call player_intro_text;
 	};
 
-	if (not(_first_time) && ([_player] call player_blufor)) then {
+	if (not(_first_time) && ([_player] call player_gov)) then {
 		[_player] call player_load_side_gear;
 	};
 
