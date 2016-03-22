@@ -110,43 +110,53 @@ if(isNil "opforBlackList") then {
 	];
 };
 
+if(isNil "pmcWhiteList") then {
+	pmcWhiteList = [
+		""
+	];
+};
+
 issup = ((_uid in supporters1) || (_uid in supporters2) || (_uid in supporters3) || (_uid in supporters4) || (_uid in supportersVIP));
 isvip = ((_uid in supportersVIP));
-ispmc = ((_uid in pmcwhitelist) or (isStaff) or (issup));
+ispmc = ((_uid in pmcWhiteList) or (isStaff) or (issup));
+inWhiteList = ((_uid in bluforWhiteList));
+inBlackList = ((_uid in opforBlackList));
 
-_side = playerSide;
-if(not(_uid in bluforWhiteList) && (_side == west)) then {
-	player groupChat "You are not WhiteListed for Nato!";
-	sleep 7;
-	failMission "END1";
+if (isClient) then {
+	_side = playerSide;
+	if(!inWhiteList && isNato) then {
+		player groupChat "You are not WhiteListed for Nato!";
+		sleep 7;
+		failMission "END1";s
+	};
+
+	if(inBlackList && isopf) then {
+		player groupChat "You are BlackListed from Opfor!";
+		sleep 7;
+		failMission "END1";
+	};
+		
+	if(isSupSlot && !issup) then {
+		player groupChat "You cannot join a Supporter slot without Supporter privileges!";
+		sleep 7;
+		failMission "END1";
+	};
+	if(isAdminSlot && !isAdmins) then {
+		player groupChat "You cannot join a Admin slot without being an admin!";
+		sleep 7;
+		failMission "END1";
+	};
+	if(isVipSlot && !isvip) then {
+		player groupChat "You cannot join a VIP slot without VIP privileges!";
+		sleep 7;
+		failMission "END1";
+	};
 };
 
-if((_uid in opforBlackList) && (_side == east)) then {
-	player groupChat "You are BlackListed from Opfor!";
-	sleep 7;
-	failMission "END1";
-};
-	
-if(isSupSlot && !issup) then {
-	player groupChat "You cannot join a Supporter slot without Supporter privileges!";
-	sleep 7;
-	failMission "END1";
-};
-if(isAdminSlot && !isAdmins) then {
-	player groupChat "You cannot join a Admin slot without being an admin!";
-	sleep 7;
-	failMission "END1";
-};
-if(isVipSlot && !isvip) then {
-	player groupChat "You cannot join a VIP slot without VIP privileges!";
-	sleep 7;
-	failMission "END1";
-};
-
-if(_uid in opfcmdblacklist) then {
+/*if(_uid in opforBlackList) then {
 	if (rolenumber >= 73 && rolenumber <= 74) then {
 		player groupChat "You are Blacklisted from Opfor Command Slots!";
 		sleep 7;
 		failMission "END1";
 	};
-};
+};*/
