@@ -1,6 +1,6 @@
 <Make sure all the checks are checked before submitting, [x] is a checked box!>
-- [ ] Checked if an issue was already submited like this. (Look into closed Issues as well)
-- [ ] Have information about the issue.
+- [] Checked if an issue was already submited like this. (Look into closed Issues as well)
+- [] Have information about the issue.
 
 ---
 
