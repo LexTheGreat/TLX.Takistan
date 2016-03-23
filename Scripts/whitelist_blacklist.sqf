@@ -101,6 +101,7 @@ if(isNil "bluforWhiteList") then {
 		"76561198119163382", //Chris Kyle
 		"76561198146926838", //WakeUpEatPlaySleep
 		"76561198211441867" //Kevlar
+		"76561198093358722" //Giovanni
 	];
 };
 
