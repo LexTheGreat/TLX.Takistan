@@ -850,7 +850,7 @@ player_prison_loop_opf = { _this spawn {
 		//PLAYER HAS PAID THE FULL BAIL
 		if (_bail_left <= 0 && _time_left > 0 ) exitWith {
 			private["_message"];
-			_message = format["%1-%2 has been relased from prison, after paying bail", _player, _player_name];
+			_message = format["%1-%2 has been released from prison, after paying bail", _player, _player_name];
 			format['server globalChat toString(%1);', toArray(_message)] call broadcast;
 			[_player] call player_prison_reset;
 			[_player] call player_prison_release_opf;
@@ -955,7 +955,7 @@ player_prison_loop = { _this spawn {
 		//PLAYER HAS PAID THE FULL BAIL
 		if (_bail_left <= 0 && _time_left > 0 ) exitWith {
 			private["_message"];
-			_message = format["%1-%2 has been relased from prison, after paying bail", _player, _player_name];
+			_message = format["%1-%2 has been released from prison, after paying bail", _player, _player_name];
 			format['server globalChat toString(%1);', toArray(_message)] call broadcast;
 			[_player] call player_prison_reset;
 			[_player] call player_prison_release;
