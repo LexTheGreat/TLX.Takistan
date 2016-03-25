@@ -1089,7 +1089,7 @@ get_death_message = {
 	if (respawnButtonPressed) exitWith {
 		nmchk = true;
 		["SUICIDE LOGGER", _victim_name, "respawn"] call fn_LogToServer;
-		format["%1 commited suicide, by clicking on respawn", _victim_name];
+		format["%1 committed suicide, by clicking on respawn", _victim_name];
 	};
 	
 	if (_suicide) exitWith {
