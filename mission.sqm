@@ -538,16 +538,16 @@ class Mission
 				class Item0
 				{
 					position[]={6142.1401,85.933456,11530.361};
-					azimut=128.69754;
+					azimut=128.698;
 					id=82;
 					side="WEST";
-					vehicle="CZ_Soldier_Office_DES_EP1";
+					vehicle="US_Soldier_TL_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="Blu1";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 1]; ";
-					description="NATO Leader - Whitelisted -";
+					description="NATO General - Unknown";
 				};
 			};
 		};
@@ -563,13 +563,13 @@ class Mission
 					azimut=139.89799;
 					id=83;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_TL_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="Blu2";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 1]; ";
-					description="NATO Soldier";
+					description="NATO General - Lex_The_Great";
 				};
 			};
 		};
@@ -585,13 +585,13 @@ class Mission
 					azimut=133.614;
 					id=84;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_TL_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="Blu3";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 1]; ";
-					description="NATO Soldier";
+					description="NATO General - Garcia";
 				};
 			};
 		};
@@ -607,13 +607,13 @@ class Mission
 					azimut=126.939;
 					id=85;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="Drake";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="Blu4";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 1]; ";
-					description="NATO Soldier";
+					description="NATO LT General - Heaven";
 				};
 			};
 		};
@@ -629,13 +629,13 @@ class Mission
 					azimut=124.699;
 					id=86;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_TL_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="Blu5";
 					init="removeallweapons this;this setpos [getpos this select 0, getpos this select 1, (getpos this select 2) + 1]; ";
-					description="NATO Soldier";
+					description="NATO LT General - Monkey";
 				};
 			};
 		};
@@ -651,7 +651,7 @@ class Mission
 					azimut=130.617;
 					id=87;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_Light_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1955,7 +1955,7 @@ class Mission
 					azimut=130.617;
 					id=320;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_Light_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1977,7 +1977,7 @@ class Mission
 					azimut=130.617;
 					id=321;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_Light_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -1999,7 +1999,7 @@ class Mission
 					azimut=-53.184799;
 					id=328;
 					side="WEST";
-					vehicle="CZ_Soldier_AT_DES_EP1";
+					vehicle="US_Delta_Force_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -6426,7 +6426,7 @@ class Mission
 					azimut=-396.91101;
 					id=329;
 					side="WEST";
-					vehicle="CZ_Special_Forces_TL_DES_EP1";
+					vehicle="US_Delta_Force_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -6448,7 +6448,7 @@ class Mission
 					azimut=130.617;
 					id=322;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_Light_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -6470,7 +6470,7 @@ class Mission
 					azimut=130.617;
 					id=323;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_Light_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -6492,7 +6492,7 @@ class Mission
 					azimut=130.617;
 					id=324;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_Light_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -6514,7 +6514,7 @@ class Mission
 					azimut=130.617;
 					id=325;
 					side="WEST";
-					vehicle="CZ_Soldier_Light_DES_EP1";
+					vehicle="US_Soldier_Light_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -6536,7 +6536,7 @@ class Mission
 					azimut=-409.935;
 					id=326;
 					side="WEST";
-					vehicle="CZ_Soldier_AT_DES_EP1";
+					vehicle="US_Delta_Force_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -6558,7 +6558,7 @@ class Mission
 					azimut=-397.888;
 					id=327;
 					side="WEST";
-					vehicle="CZ_Soldier_AT_DES_EP1";
+					vehicle="US_Delta_Force_EP1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
