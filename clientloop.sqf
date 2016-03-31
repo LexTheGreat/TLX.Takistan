@@ -557,7 +557,7 @@ _supWepArray = ["Pecheneg","MG36","MG36_camo","ksvk","SVD_NSPU_EP1", "M110_NVG_E
 			} count _vipWepArray;
 		};
 	};
-	if(!isPmcSlot) then {
+	if(!issup) then {
 		{
 			
 			if(_x == _pWeps) then {
