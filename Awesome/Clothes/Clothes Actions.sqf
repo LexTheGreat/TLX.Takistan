@@ -189,10 +189,17 @@ C_change_load = {
 
 // Replacing unit with new class
 C_change = {
-	private["_bankaccount", "_OldLicenses", "_inventory"];
+	private["_bankaccount", "_OldLicenses", "_inventory", "_vehicleList", "_privateStor"];
 	_bankaccount = [player] call get_bank_valuez;
 	_OldLicenses = INV_LicenseOwner;
 	_inventory = [player] call player_get_inventory;
+	
+	_privateStor = [player, "private_storage"] call player_get_array
+	if (isNil "_privateStor") then { _privateStor = []; }; if (typeName _privateStor != "ARRAY") then { _privateStor = []; };
+	
+	_vehicleList = player getVariable "vehicles_list";
+	if (isNil "_vehicleList") then { _vehicleList = []; }; if (typeName _vehicleList != "ARRAY") then { _vehicleList = []; };
+	
 	["player_rejoin_camera_complete"] call player_wait;
 	
 	if (C_changing) exitwith {player groupchat "C ERROR: already changing";};
@@ -295,6 +302,10 @@ C_change = {
 	[_newUnit] call player_reset_side_inventory;
 	[_newUnit, _gear] call player_set_gear;
 	[_newUnit, _inventory] call player_set_inventory;
+	
+	_newUnit setVariable ["vehicles_list", _vehicleList, true];
+	[_newUnit,'private_storage', _privateStor] call player_set_array;
+	
 	_newUnit setPosATL _position_atl;
 	_newUnit setDir _direction;
 	
