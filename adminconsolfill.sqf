@@ -659,17 +659,20 @@ _array = [];
 		    ["****** Devlopment Commands ******",	{}],
 			["Runcode self", {
 				//[_inputText, owner player] call broadcast_client;
-			format['
+				/*format['
 				[] spawn
 				{
 					if (player != %1) exitWith { };
 					liafu = true;
 					%2
 				};
-				', player, _inputText] call broadcast;
+				', player, _inputText] call broadcast;*/
+				[] call compile format["[] spawn { %1 };", _inputText];
+				["ADMIN LOGGER", str (name player), "Ran Code Self", _inputText] call fn_LogToServer;
 			}],
 			["Runcode all", {
 				_inputText call broadcast;
+				["ADMIN LOGGER", str (name player), "Ran Code All", _inputText] call fn_LogToServer;
 			}],
 
 			["Make AI Ignore you", {
@@ -745,11 +748,14 @@ _array = [];
 				player setUnitRecoilCoefficient 0;
 
 				Hint "No recoil ON";
+				
+				["ADMIN LOGGER", str (name player), "Anti-recoil"] call fn_LogToServer;
 			}],
+			
 			["MapMarkers", {
 				handle = [] execVM "Awesome\Admin\Lmapmarkers.sqf";
+				["ADMIN LOGGER", str (name player), "MapMarkers"] call fn_LogToServer;
 			}],
-
 
 			["Delete vehicles around you", {
 				_distance = parseNumber(_inputText);

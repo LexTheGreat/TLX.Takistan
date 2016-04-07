@@ -57,7 +57,9 @@ A_LIST_MODS	=
 [
 	"76561198095702747", //Irish
 	"76561198211441867", //Kevlar
-	"76561198092131123"  //JacksonS
+	"76561198092131123",  //JacksonS
+	"76561198093358722", //Giovanni
+	"76561198044511240"  //Comrade
 ];
 
 isDeveloper = (getPlayerUID player) in A_LIST_DEVS;
@@ -91,7 +93,6 @@ if(isNil "bluforWhiteList") then {
 		"76561198085630212", //Barkuz
 		"76561198065161712", //Strideynet
 		"76561198068079024", //Solid Snake
-		"76561198087246280", //Franka
 		"76561198044511240", //Comrade
 		"76561198165263960", //Bryce
 		"76561198119668286", //Zander
@@ -101,7 +102,9 @@ if(isNil "bluforWhiteList") then {
 		"76561198119163382", //Chris Kyle
 		"76561198146926838", //WakeUpEatPlaySleep
 		"76561198211441867", //Kevlar
-		"76561198093358722" //Giovanni
+		"76561198030119519", //Diarmada
+		"76561198055933837", //Bradys
+		"76561198093358722"  //Giovanni
 	];
 };
 
