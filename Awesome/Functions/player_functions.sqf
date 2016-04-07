@@ -1437,7 +1437,7 @@ player_get_gear = {
 
 // Basic Stun Gear, M9 + Ammo
 GovStunGear_Mags = ["15Rnd_9x19_M9SD","15Rnd_9x19_M9SD","15Rnd_9x19_M9SD","15Rnd_9x19_M9SD"];
-GovStunGear_Weap  = ["ItemGPS","M9", "Binocular", "NVGoggles"];
+GovStunGear_Weap  = ["ItemGPS","M9","Binocular","NVGoggles"];
 
 TNPGear_Weap = GovStunGear_Weap + [
 	"M1014"
@@ -1502,7 +1502,7 @@ player_set_gear = {
 				_magazines = OpforGear_Mags;
 				_weapons = OpforGear_Weap;	
 			} else {
-				if ([_player] call player_tnp)) then {
+				if ([_player] call player_tnp) then {
 					_magazines = TNPGear_Mags;
 					_weapons = TNPGear_Weap;	
 				};
