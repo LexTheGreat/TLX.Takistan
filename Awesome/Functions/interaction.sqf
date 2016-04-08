@@ -1273,7 +1273,7 @@ interact_rob_inventory_receive = {
 		[_player, format["(failed-armed-robbery, %1-%2)", _target, (name _target)], 20000] call player_update_warrants;
 		
 		private["_message"];
-		_message = format["%1-%2 attemted to rob %3-%4 but failed", _player, (name _player), _target, (name _target)];
+		_message = format["%1-%2 attempted to rob %3-%4 but failed", _player, (name _player), _target, (name _target)];
 		format['hint toString(%1);', toArray(_message)] call broadcast;
 	};
 	
